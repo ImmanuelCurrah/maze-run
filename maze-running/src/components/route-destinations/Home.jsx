@@ -30,7 +30,7 @@ export default function Home() {
           }}
         >
           <option>Select a Character</option>
-          <option>Character</option>
+          <option>Blue Witch</option>
           <option>Character</option>
           <option>Character</option>
           <option>Character</option>

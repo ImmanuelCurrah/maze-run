@@ -1,6 +1,5 @@
 import { Fragment } from "react/cjs/react.production.min";
 import { Routes, Route } from "react-router-dom";
-import NavBar from "./components/UI/NavBar";
 import Home from "./components/route-destinations/Home";
 import MazeOne from "./components/mazes/MazeOne";
 import MazeTwo from "./components/mazes/MazeTwo";
