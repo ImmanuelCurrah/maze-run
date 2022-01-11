@@ -1,0 +1,5 @@
+.grid {
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+}
