@@ -2,6 +2,7 @@ import BlueWitch from "../character-generator/BlueWitch";
 import FloorTile from "../mapHandlers/FloorTile";
 import Wall from "../mapHandlers/Wall";
 import EndPoint from "../mapHandlers/EndPoint";
+import FinishedGame from "../mapHandlers/FinishedGame";
 
 export const useMapHandler = (grid) => {
   const onClick = (event) => {
@@ -19,6 +20,8 @@ export const useMapHandler = (grid) => {
             return <BlueWitch key={nodeId} />;
           } else if (node === 4) {
             return <EndPoint key={nodeId} />;
+          } else if (node === 5) {
+            return <FinishedGame key={nodeId} />;
           } else {
             return <FloorTile key={nodeId}></FloorTile>;
           }

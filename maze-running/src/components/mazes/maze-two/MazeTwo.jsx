@@ -68,8 +68,7 @@ export default function MazeOne() {
       return;
     } else if (grid[loopRow + 1][loopCol] === 4) {
       console.log("you won");
-      grid[loopRow + 1][loopCol] = 3;
-      grid[loopRow][loopCol] = 1;
+      grid[loopRow + 1][loopCol] = 5;
     } else {
       grid[loopRow + 1][loopCol] = 3;
       grid[loopRow][loopCol] = 1;

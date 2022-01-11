@@ -1,5 +1,6 @@
 .end-point {
   width: 32px;
   height: 32px;
-  background-color: red;
+  background: url("../assets/mazes/chest.png");
+  background-color: green;
 }
