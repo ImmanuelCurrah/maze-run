@@ -1,0 +1,6 @@
+.wall {
+  width: 32px;
+  height: 32px;
+  /* background: url("../assets/mazes/grass2.png"); */
+  background-color: blue;
+}
