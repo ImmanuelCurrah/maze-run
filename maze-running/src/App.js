@@ -5,6 +5,7 @@ import MazeOne from "./components/mazes/maze-one/MazeOne";
 import MazeTwo from "./components/mazes/maze-two/MazeTwo";
 import MazeThree from "./components/mazes/maze-three/MazeThree";
 import MazeFour from "./components/mazes/MazeFour";
+import HighScores from "./components/highscores/HighScores";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/Maze%20Three" element={<MazeThree />} />
         <Route path="/Maze%20Four" element={<MazeFour />} />
         <Route path="/maze-random" element={"Random Maze"} />
+        <Route path="/highscores" element={<HighScores />} />
       </Routes>
     </Fragment>
   );

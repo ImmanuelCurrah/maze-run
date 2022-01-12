@@ -4,6 +4,19 @@ export const useMap = (map) => {
   const [grid, setGrid] = useState(map);
   const [toggleMap, setToggleMap] = useState(false);
   const [startGame, setStartGame] = useState(false);
+  const [stopGame, setStopGame] = useState(false);
+
+  const [lastSecond, setLastSecond] = useState(0);
+  const [lastMinute, setLastMinute] = useState(0);
+
+  const recordTimerHandler = (seconds, minutes) => {
+    if (stopGame === false) {
+      setLastSecond(seconds);
+      setLastMinute(minutes);
+    } else {
+      return;
+    }
+  };
 
   // MOVE UP
   const moveUp = (characterNumber) => {
@@ -87,9 +100,10 @@ export const useMap = (map) => {
     if (grid[loopRow + 1][loopCol] === 2) {
       return;
     } else if (grid[loopRow + 1][loopCol] === 4) {
-      console.log("you won");
-      // console.log(endTime);
+      console.log(`minutes: ${lastMinute} seconds: ${lastSecond}`);
       grid[loopRow + 1][loopCol] = 5;
+      grid[loopRow][loopCol] = characterNumber;
+      setStopGame(true);
     } else {
       const newGrid = grid;
       grid[loopRow + 1][loopCol] = characterNumber;
@@ -136,5 +150,7 @@ export const useMap = (map) => {
     moveLeft,
     moveRight,
     startGame,
+    recordTimerHandler,
+    stopGame,
   };
 };

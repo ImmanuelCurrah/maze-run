@@ -13,9 +13,15 @@ import downArrow from "../../assets/arrows/down-arrow.png";
 import Timer from "../../highscores/Timer";
 
 export default function MazeOne() {
-  // const [endTime, setEndTime] = useState(0);
-  const { grid, moveUp, moveDown, moveLeft, moveRight, startGame } =
-    useMap(MapTwo);
+  const {
+    grid,
+    moveUp,
+    moveDown,
+    moveLeft,
+    moveRight,
+    startGame,
+    recordTimerHandler,
+  } = useMap(MapTwo);
 
   return (
     <Fragment>
@@ -24,7 +30,10 @@ export default function MazeOne() {
         <MapHandler grid={grid} />
         <div className={classes.controls}>
           <div>
-            <Timer startGame={startGame} />
+            <Timer
+              startGame={startGame}
+              recordTimerHandler={recordTimerHandler}
+            />
           </div>
           <div className={classes.arrows}>
             <div>

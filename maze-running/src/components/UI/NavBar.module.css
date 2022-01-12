@@ -3,4 +3,9 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   font-size: 20px;
+  background-color: lightblue;
+  height: 40px;
+  align-items: center;
+  border-bottom: 2px solid black;
+  margin-bottom: 2px;
 }

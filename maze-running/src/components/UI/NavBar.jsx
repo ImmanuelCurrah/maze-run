@@ -6,7 +6,7 @@ export default function NavBar(props) {
     <nav>
       <Link to="/">Maze Running!</Link>
       <div>{props.urlAddress}</div>
-      <div>Hamburger Menu</div>
+      <Link to="/highscores">High Scores</Link>
     </nav>
   );
 }
