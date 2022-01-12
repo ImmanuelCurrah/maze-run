@@ -7,18 +7,13 @@ import BlueWitchFront from "../character-generator/BlueWitchFront";
 import BlueWitchRight from "../character-generator/BlueWitchRight";
 import BlueWitchLeft from "../character-generator/BlueWitchLeft";
 
-export const useMapHandler = (grid) => {
-  const onClick = (event) => {
-    console.log(event);
-  };
-
-  const mapHandler = grid.map((row, rowID) => {
+export default function MapHandler({ grid }) {
+  return grid.map((row, rowID) => {
     return (
       <div key={rowID}>
         {row.map((node, nodeId) => {
-          // console.log([node]);
           if (node === 2) {
-            return <Wall onClick={onClick} key={nodeId} />;
+            return <Wall key={nodeId} />;
           } else if (node === 3) {
             return <BlueWitch key={nodeId} />;
           } else if (node === 6) {
@@ -38,5 +33,4 @@ export const useMapHandler = (grid) => {
       </div>
     );
   });
-  return mapHandler;
-};
+}
