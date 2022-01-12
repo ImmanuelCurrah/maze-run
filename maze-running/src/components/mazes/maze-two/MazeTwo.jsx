@@ -10,9 +10,11 @@ import rightArrow from "../../assets/arrows/right-arrow.png";
 import leftArrow from "../../assets/arrows/left-arrow.png";
 import upArrow from "../../assets/arrows/up-arrow.png";
 import downArrow from "../../assets/arrows/down-arrow.png";
+import Timer from "../../highscores/Timer";
 
 export default function MazeOne() {
-  const { grid, moveUp, moveDown, moveLeft, moveRight } = useMap(MapTwo);
+  const { grid, moveUp, moveDown, moveLeft, moveRight, startGame, setEndTime } =
+    useMap(MapTwo);
 
   return (
     <Fragment>
@@ -24,6 +26,7 @@ export default function MazeOne() {
       <Arrow src={leftArrow} onClick={moveLeft} direction={8} />
       <Arrow src={upArrow} onClick={moveUp} direction={3} />
       <Arrow src={downArrow} onClick={moveDown} direction={6} />
+      <Timer startGame={startGame} setEndTime={setEndTime} />
     </Fragment>
   );
 }

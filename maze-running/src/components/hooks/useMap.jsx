@@ -3,7 +3,10 @@ import { useState } from "react";
 export const useMap = (map) => {
   const [grid, setGrid] = useState(map);
   const [toggleMap, setToggleMap] = useState(false);
+  const [startGame, setStartGame] = useState(false);
+  const [endTime, setEndTime] = useState(0);
 
+  // MOVE UP
   const moveUp = (characterNumber) => {
     let length = grid.length;
     let loopRow = 0;
@@ -33,6 +36,7 @@ export const useMap = (map) => {
     setToggleMap((prevToggle) => !prevToggle);
   };
 
+  //MOVE DOWN
   const moveDown = (characterNumber) => {
     let length = grid.length;
     let loopRow = 0;
@@ -62,6 +66,7 @@ export const useMap = (map) => {
     setToggleMap((prevToggle) => !prevToggle);
   };
 
+  //MOVE RIGHT
   const moveRight = (characterNumber) => {
     let length = grid.length;
     let loopRow = 0;
@@ -84,6 +89,7 @@ export const useMap = (map) => {
       return;
     } else if (grid[loopRow + 1][loopCol] === 4) {
       console.log("you won");
+      console.log(endTime);
       grid[loopRow + 1][loopCol] = 5;
     } else {
       const newGrid = grid;
@@ -92,8 +98,10 @@ export const useMap = (map) => {
       setGrid(newGrid);
     }
     setToggleMap((prevToggle) => !prevToggle);
+    setStartGame(true);
   };
 
+  //MOVE LEFT
   const moveLeft = (characterNumber) => {
     let length = grid.length;
     let loopRow = 0;
@@ -122,5 +130,13 @@ export const useMap = (map) => {
     }
     setToggleMap((prevToggle) => !prevToggle);
   };
-  return { grid, moveUp, setGrid, moveDown, moveLeft, moveRight };
+  return {
+    grid,
+    moveUp,
+    moveDown,
+    moveLeft,
+    moveRight,
+    startGame,
+    setEndTime,
+  };
 };
