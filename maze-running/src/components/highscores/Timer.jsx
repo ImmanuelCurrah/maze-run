@@ -4,8 +4,6 @@ export default function Timer({ startGame, recordTimerHandler }) {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
 
-  console.log(startGame);
-
   let myInterval;
 
   useEffect(() => {
