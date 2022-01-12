@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useGetHighScoresUpdate } from "./useHighScoresUpdate";
 
 export const useMap = (map) => {
   const [grid, setGrid] = useState(map);
@@ -9,10 +10,13 @@ export const useMap = (map) => {
   const [lastSecond, setLastSecond] = useState(0);
   const [lastMinute, setLastMinute] = useState(0);
 
+  const { timeHandler } = useGetHighScoresUpdate(stopGame);
+
   const recordTimerHandler = (seconds, minutes) => {
     if (stopGame === false) {
       setLastSecond(seconds);
       setLastMinute(minutes);
+      timeHandler(lastSecond, lastMinute);
     } else {
       return;
     }
@@ -100,7 +104,6 @@ export const useMap = (map) => {
     if (grid[loopRow + 1][loopCol] === 2) {
       return;
     } else if (grid[loopRow + 1][loopCol] === 4) {
-      console.log(`minutes: ${lastMinute} seconds: ${lastSecond}`);
       grid[loopRow + 1][loopCol] = 5;
       grid[loopRow][loopCol] = characterNumber;
       setStopGame(true);

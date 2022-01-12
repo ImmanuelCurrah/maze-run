@@ -1,11 +1,11 @@
 import { Fragment } from "react";
-import NavBar from "../../UI/NavBar";
-import { grid as MapTwo } from "../maze-two/MazeTwoConstants";
+import { grid as MapFour } from "../maze-four/MazeFourConstants";
 import MapHandler from "../../map/MapHandler";
-import Arrow from "../../UI/Arrow";
 import { useMap } from "../../hooks/useMap";
+import NavBar from "../../UI/NavBar";
+import Arrow from "../../UI/Arrow";
+import classes from "./MazeFour.module.css";
 
-import classes from "./MazeTwo.module.css";
 import rightArrow from "../../assets/arrows/right-arrow.png";
 import leftArrow from "../../assets/arrows/left-arrow.png";
 import upArrow from "../../assets/arrows/up-arrow.png";
@@ -21,13 +21,13 @@ export default function MazeOne() {
     moveRight,
     startGame,
     recordTimerHandler,
-  } = useMap(MapTwo);
+  } = useMap(MapFour);
 
   return (
     <Fragment>
-      <NavBar urlAddress={"Maze Two"} />
-      <div className={classes["maze-two"]}>
-        <MapHandler grid={grid} />
+      <NavBar urlAddress={"Maze Four"} />
+      <div className={classes["maze-four"]}>
+        <MapHandler grid={MapFour} />
         <div className={classes.controls}>
           <div>
             <Timer

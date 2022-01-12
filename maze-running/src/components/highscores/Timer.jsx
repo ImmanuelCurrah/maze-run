@@ -12,8 +12,6 @@ export default function Timer({ startGame, recordTimerHandler }) {
         myInterval = setInterval(() => {
           setSeconds((prevSecond) => prevSecond + 1);
         }, 1000);
-      } else {
-        return;
       }
     };
     timerHandler();
