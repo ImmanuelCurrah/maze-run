@@ -21,6 +21,11 @@ export const useGetHighScoresUpdate = (stopGame) => {
   useEffect(() => {
     if (stopGame === true) {
       console.log(endTime);
+      const fields = endTime;
+      const updateHighScoresHandler = async () => {
+        await api.post("", { fields });
+      };
+      updateHighScoresHandler();
     } else {
       return;
     }
