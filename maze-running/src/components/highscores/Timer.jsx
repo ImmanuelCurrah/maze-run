@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 
-export default function Timer({ startGame, setEndTime }) {
+export default function Timer({ startGame }) {
+  let timeSecond = 50;
+  let timeMinute = 0;
+
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
 
@@ -8,7 +11,7 @@ export default function Timer({ startGame, setEndTime }) {
     if (startGame === true) {
       setInterval(() => {
         setSeconds((prevSecond) => prevSecond + 1);
-        setEndTime((prevTime) => prevTime + 1);
+        // setEndTime((prevTime) => prevTime + 1);
       }, 1000);
     }
   }, [startGame]);

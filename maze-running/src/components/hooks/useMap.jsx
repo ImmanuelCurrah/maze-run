@@ -4,7 +4,6 @@ export const useMap = (map) => {
   const [grid, setGrid] = useState(map);
   const [toggleMap, setToggleMap] = useState(false);
   const [startGame, setStartGame] = useState(false);
-  const [endTime, setEndTime] = useState(0);
 
   // MOVE UP
   const moveUp = (characterNumber) => {
@@ -89,7 +88,7 @@ export const useMap = (map) => {
       return;
     } else if (grid[loopRow + 1][loopCol] === 4) {
       console.log("you won");
-      console.log(endTime);
+      // console.log(endTime);
       grid[loopRow + 1][loopCol] = 5;
     } else {
       const newGrid = grid;
@@ -137,6 +136,5 @@ export const useMap = (map) => {
     moveLeft,
     moveRight,
     startGame,
-    setEndTime,
   };
 };
