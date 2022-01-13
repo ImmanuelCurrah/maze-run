@@ -18,3 +18,11 @@
 .home:hover {
   transform: scale(1.1);
 }
+
+.bar {
+  display: flex;
+}
+
+.a {
+  display: flex;
+}

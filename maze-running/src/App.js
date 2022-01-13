@@ -7,10 +7,18 @@ import MazeThree from "./components/mazes/maze-three/MazeThree";
 import MazeFour from "./components/mazes/maze-four/MazeFour";
 import HighScores from "./components/highscores/HighScores";
 import HighScoreDetails from "./components/highscores/HighScoreDetails";
+import Links from "./components/Links/Links";
+import { useToggle } from "./components/hooks/useToggler";
 
 function App() {
+  const { toggled, toggleHandler } = useToggle();
+
+  console.log(toggled);
+
   return (
     <Fragment>
+      {toggled && <Links />}
+      <button onClick={toggleHandler}>toggle</button>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Maze%20One" element={<MazeOne />} />
