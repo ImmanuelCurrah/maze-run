@@ -25,7 +25,7 @@ export default function MazeOne() {
   } = useMap(MapFour);
 
   useEffect(() => {
-    setCurrentMazeName("Maze Three");
+    setCurrentMazeName("Maze Four");
   }, []);
 
   return (

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react/cjs/react.development";
 import { useGetHighScoresUpdate } from "./useHighScoresUpdate";
 
 export const useMap = (map) => {
