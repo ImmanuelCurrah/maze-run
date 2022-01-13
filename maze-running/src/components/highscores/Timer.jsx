@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import classes from "./Timer.module.css";
 
 export default function Timer({ startGame, recordTimerHandler }) {
   const [seconds, setSeconds] = useState(0);
@@ -28,7 +29,7 @@ export default function Timer({ startGame, recordTimerHandler }) {
 
   return (
     <div>
-      <div>{`${minutes}:${seconds}`}</div>
+      <div className={classes.timer}>{`${minutes}:${seconds}`}</div>
     </div>
   );
 }

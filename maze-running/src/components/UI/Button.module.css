@@ -1,0 +1,11 @@
+.link {
+  text-decoration: none;
+}
+
+.button {
+  height: 30px;
+  border-radius: 12px;
+  background-color: lightblue;
+  border: 1px solid lightblue;
+  margin: 10px;
+}

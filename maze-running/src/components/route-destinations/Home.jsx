@@ -6,7 +6,6 @@ import classes from "./Home.module.css";
 
 export default function Home() {
   const [maze, setMaze] = useState("");
-  const [character, setCharacter] = useState("");
 
   return (
     <Fragment>
@@ -23,17 +22,6 @@ export default function Home() {
           <option>Maze Two</option>
           <option>Maze Three</option>
           <option>Maze Four</option>
-        </select>
-        <select
-          onChange={(e) => {
-            setCharacter(e.target.value);
-          }}
-        >
-          <option>Select a Character</option>
-          <option>Blue Witch</option>
-          <option>Character</option>
-          <option>Character</option>
-          <option>Character</option>
         </select>
         <Button destination={maze}>
           <div>Start</div>

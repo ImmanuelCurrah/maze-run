@@ -10,13 +10,15 @@ export const useMap = (map) => {
   const [lastSecond, setLastSecond] = useState(0);
   const [lastMinute, setLastMinute] = useState(0);
 
+  const [currentMazeName, setCurrentMazeName] = useState("");
+
   const { timeHandler } = useGetHighScoresUpdate(stopGame);
 
   const recordTimerHandler = (seconds, minutes) => {
     if (stopGame === false) {
       setLastSecond(seconds);
       setLastMinute(minutes);
-      timeHandler(lastSecond, lastMinute);
+      timeHandler(lastSecond, lastMinute, currentMazeName);
     } else {
       return;
     }
@@ -155,5 +157,6 @@ export const useMap = (map) => {
     startGame,
     recordTimerHandler,
     stopGame,
+    setCurrentMazeName,
   };
 };

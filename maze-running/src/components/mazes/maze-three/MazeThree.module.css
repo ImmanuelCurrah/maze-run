@@ -1,5 +1,31 @@
-.grid {
-  text-align: center;
+.maze-three {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  margin-left: 10px;
+}
+
+.arrows {
+  background-color: blue;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 7px;
+}
+
+.left-right {
+  width: 130px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.controls {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }

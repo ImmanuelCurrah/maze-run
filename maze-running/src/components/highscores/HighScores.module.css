@@ -1,8 +1,6 @@
-.home {
+.highscores {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url("../assets/mazes/secondgifB.gif");
-  height: 100vh;
   color: white;
 }

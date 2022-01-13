@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import NavBar from "../../UI/NavBar";
 import { grid as MapTwo } from "../maze-two/MazeTwoConstants";
 import MapHandler from "../../map/MapHandler";
@@ -21,7 +21,12 @@ export default function MazeOne() {
     moveRight,
     startGame,
     recordTimerHandler,
+    setCurrentMazeName,
   } = useMap(MapTwo);
+
+  useEffect(() => {
+    setCurrentMazeName("Maze Three");
+  }, []);
 
   return (
     <Fragment>

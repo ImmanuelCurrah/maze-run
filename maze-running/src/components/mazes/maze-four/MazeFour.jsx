@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { grid as MapFour } from "../maze-four/MazeFourConstants";
 import MapHandler from "../../map/MapHandler";
 import { useMap } from "../../hooks/useMap";
@@ -21,7 +21,12 @@ export default function MazeOne() {
     moveRight,
     startGame,
     recordTimerHandler,
+    setCurrentMazeName,
   } = useMap(MapFour);
+
+  useEffect(() => {
+    setCurrentMazeName("Maze Three");
+  }, []);
 
   return (
     <Fragment>
