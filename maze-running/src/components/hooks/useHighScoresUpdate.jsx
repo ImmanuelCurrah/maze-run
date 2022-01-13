@@ -14,7 +14,10 @@ export const useGetHighScoresUpdate = (stopGame) => {
     setEndTime((prevTime) => {
       return {
         ...prevTime,
-        time: `${minutes}:${seconds + 1}`,
+        time:
+          seconds < 10
+            ? `${minutes}:0${seconds + 1}`
+            : `${minutes}:${seconds + 1}`,
         maze: mazeName,
       };
     });
