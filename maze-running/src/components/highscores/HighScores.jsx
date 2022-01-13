@@ -9,6 +9,17 @@ import classes from "./HighScores.module.css";
 export default function HighScores() {
   const [highScores, setHighScores] = useState({});
 
+  let record = [];
+
+  if (highScores.data) {
+    console.log(highScores.data.records);
+    highScores.data.records.map((time) => {
+      return record.push(time.fields.time);
+    });
+  }
+
+  console.log(record);
+
   useEffect(() => {
     const fetchHighScoresData = async () => {
       let response = await api.get();
@@ -25,8 +36,7 @@ export default function HighScores() {
           highScores.data.records.map((score) => {
             return (
               <Card key={score.id}>
-                <h2>{`Name: ${score.fields.name}`}</h2>
-                <h4>{`Maze: ${score.fields.maze}`}</h4>
+                <h4>{`${score.fields.maze}`}</h4>
                 <Button destination={score.id}>See Details</Button>
               </Card>
             );

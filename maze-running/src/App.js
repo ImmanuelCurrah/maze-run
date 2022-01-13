@@ -1,4 +1,4 @@
-import { Fragment } from "react/cjs/react.production.min";
+import { Fragment, useState } from "react/cjs/react.production.min";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/route-destinations/Home";
 import MazeOne from "./components/mazes/maze-one/MazeOne";

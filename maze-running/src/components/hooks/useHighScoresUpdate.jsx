@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import api from "../services/apiConfig";
 
 const defaultScore = {
-  name: "",
   score: "2000",
   time: "",
   maze: "",

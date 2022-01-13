@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
 import { useGetHighScoresUpdate } from "./useHighScoresUpdate";
+import { useNavigate } from "react-router-dom";
 
 export const useMap = (map) => {
   const [grid, setGrid] = useState(map);
@@ -8,12 +8,16 @@ export const useMap = (map) => {
   const [startGame, setStartGame] = useState(false);
   const [stopGame, setStopGame] = useState(false);
 
+  // console.log(stopGame);
+
   const [lastSecond, setLastSecond] = useState(0);
   const [lastMinute, setLastMinute] = useState(0);
 
   const [currentMazeName, setCurrentMazeName] = useState("");
 
   const { timeHandler } = useGetHighScoresUpdate(stopGame);
+
+  const navigate = useNavigate();
 
   const recordTimerHandler = (seconds, minutes) => {
     if (stopGame === false) {
@@ -110,6 +114,9 @@ export const useMap = (map) => {
       grid[loopRow + 1][loopCol] = 5;
       grid[loopRow][loopCol] = characterNumber;
       setStopGame(true);
+      setTimeout(() => {
+        navigate("/highscores");
+      }, 100);
     } else {
       const newGrid = grid;
       grid[loopRow + 1][loopCol] = characterNumber;
@@ -159,5 +166,6 @@ export const useMap = (map) => {
     recordTimerHandler,
     stopGame,
     setCurrentMazeName,
+    setStopGame,
   };
 };
