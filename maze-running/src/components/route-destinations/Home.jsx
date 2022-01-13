@@ -6,12 +6,22 @@ import classes from "./Home.module.css";
 
 export default function Home() {
   const [maze, setMaze] = useState("");
+  const [name, setName] = useState("");
 
   return (
     <Fragment>
       <NavBar urlAddress={"Home"} />
       <div className={classes.home}>
         <h1>Welcome to Maze Running!</h1>
+        <form>
+          <input
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+            type="text"
+            placeholder="Whats your name?"
+          />
+        </form>
         <select
           onChange={(e) => {
             setMaze(e.target.value);

@@ -11,7 +11,7 @@ const defaultScore = {
 export const useGetHighScoresUpdate = (stopGame) => {
   const [endTime, setEndTime] = useState(defaultScore);
 
-  const timeHandler = (seconds, minutes, mazeName) => {
+  const timeHandler = (seconds, minutes, mazeName, name) => {
     setEndTime((prevTime) => {
       return {
         ...prevTime,

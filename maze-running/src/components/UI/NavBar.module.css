@@ -1,4 +1,4 @@
-nav {
+.nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -7,4 +7,14 @@ nav {
   height: 40px;
   align-items: center;
   border-bottom: 4px solid black;
+}
+
+.home {
+  text-decoration: none;
+  color: purple;
+  font-weight: 900;
+}
+
+.home:hover {
+  transform: scale(1.1);
 }
