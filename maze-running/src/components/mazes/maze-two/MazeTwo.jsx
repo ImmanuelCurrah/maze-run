@@ -11,7 +11,7 @@ import upArrow from "../../assets/arrows/up-arrow.png";
 import downArrow from "../../assets/arrows/down-arrow.png";
 import Timer from "../../highscores/Timer";
 
-export default function MazeOne() {
+export default function MazeTwo() {
   const {
     grid,
     moveUp,
@@ -32,6 +32,7 @@ export default function MazeOne() {
       <div className={classes["maze-two"]}>
         <MapHandler grid={grid} />
         <div className={classes.controls}>
+          <h4>Maze Two</h4>
           <div>
             <Timer
               startGame={startGame}

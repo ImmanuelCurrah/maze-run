@@ -17,7 +17,7 @@ function App() {
   return (
     <Fragment>
       <NavBar onOpenLinks={toggleHandler} />
-      {toggled && <Links />}
+      {toggled && <Links onOpenLinks={toggleHandler} />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Maze%20One" element={<MazeOne />} />

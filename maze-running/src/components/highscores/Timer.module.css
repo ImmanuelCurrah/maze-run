@@ -1,3 +1,7 @@
 .timer {
   color: white;
 }
+.timer {
+  font-family: "Orbitron", sans-serif;
+  font-size: 30px;
+}

@@ -33,6 +33,7 @@ export default function MazeOne() {
       <div className={classes["maze-four"]}>
         <MapHandler grid={MapFour} />
         <div className={classes.controls}>
+          <h4>Maze Four</h4>
           <div>
             <Timer
               startGame={startGame}
