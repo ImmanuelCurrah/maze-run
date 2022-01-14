@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
-import Modal from "../UI/Modal";
+import classes from "./Links.module.css";
 
 export default function Links() {
   return (
-    <Modal>
-      <Link to="/highscores">High Scores</Link>
-    </Modal>
+    <div className={classes.border}>
+      <Link className={classes.link} to="/">
+        Home
+      </Link>
+      <Link className={classes.link} to="/highscores">
+        High Scores
+      </Link>
+    </div>
   );
 }

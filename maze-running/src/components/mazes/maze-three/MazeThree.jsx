@@ -30,7 +30,6 @@ export default function MazeOne() {
 
   return (
     <Fragment>
-      <NavBar urlAddress={"Maze Three"} />
       <div className={classes["maze-three"]}>
         <MapHandler grid={grid} />
         <div className={classes.controls}>

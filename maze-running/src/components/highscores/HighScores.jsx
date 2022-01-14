@@ -1,6 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
 import api from "../services/apiConfig";
-import NavBar from "../UI/NavBar";
 import Button from "../UI/Button";
 import Card from "../UI/Card";
 
@@ -30,7 +29,6 @@ export default function HighScores() {
 
   return (
     <Fragment>
-      <NavBar urlAddress={"High Scores"} />
       <div className={classes.highscores}>
         {highScores.data &&
           highScores.data.records.map((score) => {

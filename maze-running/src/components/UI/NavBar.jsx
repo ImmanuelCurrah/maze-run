@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
 import Hamburger from "./Hamburger";
 import classes from "./NavBar.module.css";
 
 export default function NavBar(props) {
   return (
     <nav className={classes.nav}>
-      <div className={classes.home}>Broom Zoom!</div>
-      <div className={classes.home}>Home</div>
-      <div onClick={props.onOpen}>
+      <Link className={classes.home} to="/">
+        Broom Zoom!
+      </Link>
+      <div onClick={props.onOpenLinks}>
         <Hamburger />
       </div>
     </nav>

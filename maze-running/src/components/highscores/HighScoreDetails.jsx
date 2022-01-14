@@ -28,7 +28,6 @@ export default function HighScoreDetails() {
 
   return (
     <Fragment>
-      <NavBar urlAddress={"Score Details"} />
       <div className={classes.highscoredetails}>
         <h1>High Score Detail</h1>
         <Card>

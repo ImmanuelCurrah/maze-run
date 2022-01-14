@@ -7,3 +7,16 @@
   color: white;
   /* justify-content: space-evenly; */
 }
+
+.content {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select {
+  height: 35px;
+  width: 200px;
+  border-radius: 12px;
+}

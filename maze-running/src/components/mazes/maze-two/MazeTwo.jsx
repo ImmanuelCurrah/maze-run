@@ -1,5 +1,4 @@
 import { Fragment, useEffect } from "react";
-import NavBar from "../../UI/NavBar";
 import { grid as MapTwo } from "../maze-two/MazeTwoConstants";
 import MapHandler from "../../map/MapHandler";
 import Arrow from "../../UI/Arrow";
@@ -30,7 +29,6 @@ export default function MazeOne() {
 
   return (
     <Fragment>
-      <NavBar urlAddress={"Maze Two"} />
       <div className={classes["maze-two"]}>
         <MapHandler grid={grid} />
         <div className={classes.controls}>
