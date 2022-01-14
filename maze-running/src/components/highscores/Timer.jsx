@@ -19,10 +19,12 @@ export default function Timer({ startGame, recordTimerHandler }) {
     return () => {
       clearInterval(myInterval);
     };
+    //eslint-ignore-next-line
   }, [startGame]);
 
   useEffect(() => {
     recordTimerHandler(seconds, minutes);
+    //eslint-ignore-next-line
   }, [seconds]);
 
   if (seconds === 60) {
