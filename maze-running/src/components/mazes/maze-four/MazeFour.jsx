@@ -1,8 +1,7 @@
 import { Fragment, useEffect } from "react";
 import { grid as MapFour } from "../maze-four/MazeFourConstants";
-import MapHandler from "../../map/MapHandler";
+import DungeonMapHandler from "../../map/DungeonMapHandler";
 import { useMap } from "../../hooks/useMap";
-import NavBar from "../../UI/NavBar";
 import Arrow from "../../UI/Arrow";
 import classes from "./MazeFour.module.css";
 
@@ -32,7 +31,7 @@ export default function MazeOne() {
   return (
     <Fragment>
       <div className={classes["maze-four"]}>
-        <MapHandler grid={MapFour} />
+        <DungeonMapHandler grid={MapFour} />
         <div className={classes.controls}>
           <h4>Maze Four</h4>
           <div>{`Score: ${trueScore}`}</div>

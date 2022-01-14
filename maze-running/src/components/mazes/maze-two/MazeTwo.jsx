@@ -1,6 +1,6 @@
 import { Fragment, useEffect } from "react";
 import { grid as MapTwo } from "../maze-two/MazeTwoConstants";
-import MapHandler from "../../map/MapHandler";
+import BeachMapHandler from "../../map/BeachMapHandler";
 import Arrow from "../../UI/Arrow";
 import { useMap } from "../../hooks/useMap";
 
@@ -31,7 +31,7 @@ export default function MazeTwo() {
   return (
     <Fragment>
       <div className={classes["maze-two"]}>
-        <MapHandler grid={grid} />
+        <BeachMapHandler grid={grid} />
         <div className={classes.controls}>
           <h4>Maze Two</h4>
           <div>{`Score: ${trueScore}`}</div>

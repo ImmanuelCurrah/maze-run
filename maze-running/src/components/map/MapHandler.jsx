@@ -1,8 +1,6 @@
 import BlueWitch from "../character-generator/BlueWitch";
 import FloorTile from "../mapHandlers/FloorTile";
 import Wall from "../mapHandlers/Wall";
-import WaterWall from "../mapHandlers/dungeon-tiles/WaterWall";
-import StepStone from "../mapHandlers/dungeon-tiles/StepStone";
 import EndPoint from "../mapHandlers/EndPoint";
 import FinishedGame from "../mapHandlers/FinishedGame";
 import BlueWitchFront from "../character-generator/BlueWitchFront";
@@ -28,10 +26,6 @@ export default function MapHandler({ grid }) {
             return <EndPoint key={nodeId} />;
           } else if (node === 5) {
             return <FinishedGame key={nodeId} />;
-          } else if (node === 9) {
-            return <WaterWall key={nodeId} />;
-          } else if (node === 10) {
-            return <StepStone key={nodeId} />;
           } else {
             return <FloorTile key={nodeId}></FloorTile>;
           }

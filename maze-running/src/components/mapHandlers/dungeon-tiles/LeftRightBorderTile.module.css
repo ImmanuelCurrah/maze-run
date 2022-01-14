@@ -1,0 +1,5 @@
+.tile {
+  width: 32px;
+  height: 32px;
+  background: url("../../assets/mazes/dungeon-style/wall-d-tile.png");
+}

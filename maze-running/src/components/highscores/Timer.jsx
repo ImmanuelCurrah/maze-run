@@ -16,6 +16,9 @@ export default function Timer({ startGame, recordTimerHandler }) {
       }
     };
     timerHandler();
+    return () => {
+      clearInterval(myInterval);
+    };
   }, [startGame]);
 
   useEffect(() => {

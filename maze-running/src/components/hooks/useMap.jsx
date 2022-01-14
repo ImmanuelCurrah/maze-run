@@ -22,7 +22,8 @@ export const useMap = (map) => {
       setLastSecond(seconds);
       setLastMinute(minutes);
       timeHandler(lastSecond, lastMinute, currentMazeName, trueScore);
-    } else {
+    } else if (stopGame === true) {
+      console.log("ps. That was slow af");
       return;
     }
   };
@@ -46,7 +47,7 @@ export const useMap = (map) => {
         }
       }
     }
-    if (grid[loopRow][loopCol - 1] === 2) {
+    if (grid[loopRow][loopCol - 1] === 2 || grid[loopRow][loopCol - 1] === 9) {
       return;
     } else {
       const newGrid = grid;
@@ -77,7 +78,7 @@ export const useMap = (map) => {
         }
       }
     }
-    if (grid[loopRow][loopCol + 1] === 2) {
+    if (grid[loopRow][loopCol + 1] === 2 || grid[loopRow][loopCol + 1] === 9) {
       return;
     } else {
       const newGrid = grid;
@@ -108,7 +109,7 @@ export const useMap = (map) => {
         }
       }
     }
-    if (grid[loopRow + 1][loopCol] === 2) {
+    if (grid[loopRow + 1][loopCol] === 2 || grid[loopRow + 1][loopCol] === 9) {
       return;
     } else if (grid[loopRow + 1][loopCol] === 4) {
       grid[loopRow + 1][loopCol] = 5;
@@ -116,7 +117,8 @@ export const useMap = (map) => {
       setStopGame(true);
       setTimeout(() => {
         navigate("/highscores");
-      }, 100);
+        window.location.reload(false);
+      }, 500);
     } else {
       const newGrid = grid;
       grid[loopRow + 1][loopCol] = characterNumber;
@@ -147,7 +149,7 @@ export const useMap = (map) => {
         }
       }
     }
-    if (grid[loopRow - 1][loopCol] === 2) {
+    if (grid[loopRow - 1][loopCol] === 2 || grid[loopRow - 1][loopCol] === 9) {
       return;
     } else {
       const newGrid = grid;
