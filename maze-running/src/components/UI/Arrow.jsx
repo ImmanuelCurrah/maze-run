@@ -8,6 +8,7 @@ export default function Arrow(props) {
       onClick={() => {
         props.onClick(props.direction);
       }}
+      alt="an arrow button"
     ></img>
   );
 }

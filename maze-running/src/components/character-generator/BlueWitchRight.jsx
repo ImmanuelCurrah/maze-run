@@ -4,7 +4,7 @@ import classes from "./BlueWitch.module.css";
 export default function BlueWitchRight() {
   return (
     <div className={classes.bluewitch}>
-      <img src={bluewitch} alt="a picture of a witch png" />
+      <img src={bluewitch} alt="a witch on a broom" />
     </div>
   );
 }

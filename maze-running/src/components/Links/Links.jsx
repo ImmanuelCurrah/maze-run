@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import classes from "./Links.module.css";
-import { useToggle } from "../hooks/useToggler";
 
 export default function Links(props) {
   return (

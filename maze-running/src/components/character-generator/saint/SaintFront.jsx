@@ -4,7 +4,7 @@ import classes from "./SaintFront.module.css";
 export default function SaintFront() {
   return (
     <div className={classes.saint}>
-      <img src={saintFront} alt="a picture of a witch png" />
+      <img src={saintFront} alt="a red haired women" />
     </div>
   );
 }

@@ -3,7 +3,6 @@ import { useEffect, useState, Fragment } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Button from "../UI/Button";
 import Card from "../UI/Card";
-import NavBar from "../UI/NavBar";
 
 import classes from "./HighScoreDetails.module.css";
 
@@ -19,7 +18,7 @@ export default function HighScoreDetails() {
       setSingleScore(response.data.fields);
     };
     fetchScoreHandler();
-  }, []);
+  }, [params.id]);
 
   const deleteScore = async () => {
     await api.delete(params.id);

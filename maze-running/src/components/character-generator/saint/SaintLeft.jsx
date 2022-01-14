@@ -4,7 +4,7 @@ import classes from "./SaintLeft.module.css";
 export default function SaintLeft() {
   return (
     <div className={classes.saint}>
-      <img src={saintLeft} alt="a picture of a witch png" />
+      <img src={saintLeft} alt="a red haired women" />
     </div>
   );
 }

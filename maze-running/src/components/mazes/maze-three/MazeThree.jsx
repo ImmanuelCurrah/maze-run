@@ -27,7 +27,7 @@ export default function MazeThree() {
 
   useEffect(() => {
     setCurrentMazeName("Maze Three");
-  }, []);
+  });
 
   return (
     <Fragment>

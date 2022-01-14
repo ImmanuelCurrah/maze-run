@@ -34,6 +34,6 @@ export const useGetHighScoresUpdate = (stopGame) => {
     } else {
       return;
     }
-  }, [stopGame]);
+  }, [stopGame, endTime]);
   return { timeHandler };
 };

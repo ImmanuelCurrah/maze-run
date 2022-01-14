@@ -1,5 +1,4 @@
 import { Fragment, useEffect } from "react";
-import NavBar from "../../UI/NavBar";
 import { grid as MapOne } from "../maze-one/MazeOneConstants";
 import MapHandler from "../../map/MapHandler";
 import Arrow from "../../UI/Arrow";
@@ -27,7 +26,7 @@ export default function MazeOne() {
 
   useEffect(() => {
     setCurrentMazeName("Maze Three");
-  }, []);
+  });
 
   return (
     <Fragment>
