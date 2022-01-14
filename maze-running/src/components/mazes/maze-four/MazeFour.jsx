@@ -31,7 +31,7 @@ export default function MazeOne() {
   return (
     <Fragment>
       <div className={classes["maze-four"]}>
-        <DungeonMapHandler grid={MapFour} />
+        <DungeonMapHandler grid={grid} />
         <div className={classes.controls}>
           <h4>Maze Four</h4>
           <div>{`Score: ${trueScore}`}</div>

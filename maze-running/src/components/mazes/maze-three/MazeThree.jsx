@@ -1,5 +1,4 @@
 import { Fragment, useEffect } from "react";
-import NavBar from "../../UI/NavBar";
 import { grid as MapThree } from "../maze-three/MazeThreeConstants";
 import MapHandler from "../../map/MapHandler";
 import Arrow from "../../UI/Arrow";
