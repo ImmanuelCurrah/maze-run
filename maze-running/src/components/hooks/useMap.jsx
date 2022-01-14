@@ -7,23 +7,21 @@ export const useMap = (map) => {
   const [toggleMap, setToggleMap] = useState(false);
   const [startGame, setStartGame] = useState(false);
   const [stopGame, setStopGame] = useState(false);
-
-  // console.log(stopGame);
-
   const [lastSecond, setLastSecond] = useState(0);
   const [lastMinute, setLastMinute] = useState(0);
-
   const [currentMazeName, setCurrentMazeName] = useState("");
+  const [score, setScore] = useState(0);
+
+  let trueScore = score + lastSecond + lastMinute * 60;
 
   const { timeHandler } = useGetHighScoresUpdate(stopGame);
-
   const navigate = useNavigate();
 
   const recordTimerHandler = (seconds, minutes) => {
     if (stopGame === false) {
       setLastSecond(seconds);
       setLastMinute(minutes);
-      timeHandler(lastSecond, lastMinute, currentMazeName);
+      timeHandler(lastSecond, lastMinute, currentMazeName, trueScore);
     } else {
       return;
     }
@@ -57,6 +55,7 @@ export const useMap = (map) => {
       setGrid(newGrid);
     }
     setToggleMap((prevToggle) => !prevToggle);
+    setScore((prevScore) => prevScore + 10);
   };
 
   //MOVE DOWN
@@ -87,6 +86,7 @@ export const useMap = (map) => {
       setGrid(newGrid);
     }
     setToggleMap((prevToggle) => !prevToggle);
+    setScore((prevScore) => prevScore + 10);
   };
 
   //MOVE RIGHT
@@ -124,6 +124,7 @@ export const useMap = (map) => {
       setGrid(newGrid);
     }
     setToggleMap((prevToggle) => !prevToggle);
+    setScore((prevScore) => prevScore + 10);
     setStartGame(true);
   };
 
@@ -155,6 +156,7 @@ export const useMap = (map) => {
       setGrid(newGrid);
     }
     setToggleMap((prevToggle) => !prevToggle);
+    setScore((prevScore) => prevScore + 10);
   };
   return {
     grid,
@@ -167,5 +169,6 @@ export const useMap = (map) => {
     stopGame,
     setCurrentMazeName,
     setStopGame,
+    trueScore,
   };
 };

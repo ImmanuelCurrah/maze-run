@@ -22,6 +22,7 @@ export default function MazeThree() {
     startGame,
     recordTimerHandler,
     setCurrentMazeName,
+    trueScore,
   } = useMap(MapThree);
 
   useEffect(() => {
@@ -34,6 +35,7 @@ export default function MazeThree() {
         <MapHandler grid={grid} />
         <div className={classes.controls}>
           <h4>Maze Three</h4>
+          <div>{`Score: ${trueScore}`}</div>
           <div>
             <Timer
               startGame={startGame}

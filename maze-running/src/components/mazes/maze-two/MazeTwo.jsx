@@ -21,6 +21,7 @@ export default function MazeTwo() {
     startGame,
     recordTimerHandler,
     setCurrentMazeName,
+    trueScore,
   } = useMap(MapTwo);
 
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function MazeTwo() {
         <MapHandler grid={grid} />
         <div className={classes.controls}>
           <h4>Maze Two</h4>
+          <div>{`Score: ${trueScore}`}</div>
           <div>
             <Timer
               startGame={startGame}

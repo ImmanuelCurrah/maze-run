@@ -22,6 +22,7 @@ export default function MazeOne() {
     startGame,
     recordTimerHandler,
     setCurrentMazeName,
+    trueScore,
   } = useMap(MapFour);
 
   useEffect(() => {
@@ -34,6 +35,7 @@ export default function MazeOne() {
         <MapHandler grid={MapFour} />
         <div className={classes.controls}>
           <h4>Maze Four</h4>
+          <div>{`Score: ${trueScore}`}</div>
           <div>
             <Timer
               startGame={startGame}

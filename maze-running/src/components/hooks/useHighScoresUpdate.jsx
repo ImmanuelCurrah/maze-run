@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import api from "../services/apiConfig";
 
 const defaultScore = {
-  score: "2000",
+  score: 0,
   time: "",
   maze: "",
 };
@@ -10,10 +10,11 @@ const defaultScore = {
 export const useGetHighScoresUpdate = (stopGame) => {
   const [endTime, setEndTime] = useState(defaultScore);
 
-  const timeHandler = (seconds, minutes, mazeName) => {
+  const timeHandler = (seconds, minutes, mazeName, trueScore) => {
     setEndTime((prevTime) => {
       return {
         ...prevTime,
+        score: trueScore,
         time:
           seconds < 10
             ? `${minutes}:0${seconds + 1}`
