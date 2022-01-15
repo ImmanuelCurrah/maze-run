@@ -4,7 +4,7 @@ import EndPoint from "../mapHandlers/chest-tiles/EndPoint";
 import FinishedGame from "../mapHandlers/chest-tiles/FinishedGame";
 import RedDudeBack from "../character-generator/red-dude/RedDudeBack";
 import RedDudeFront from "../character-generator/red-dude/RedDudeFront";
-import RedDudeRight from "../character-generator/red-dude/RedDudeRight";
+import SnowPrincessRight from "../character-generator/snow-princess/SnowPrincessRight";
 import RedDudeLeft from "../character-generator/red-dude/RedDudeLeft";
 
 export default function BeachMapHandler({ grid }) {
@@ -19,7 +19,7 @@ export default function BeachMapHandler({ grid }) {
           } else if (node === 6) {
             return <RedDudeFront key={nodeId} />;
           } else if (node === 7) {
-            return <RedDudeRight key={nodeId} />;
+            return <SnowPrincessRight key={nodeId} />;
           } else if (node === 8) {
             return <RedDudeLeft key={nodeId} />;
           } else if (node === 4) {
