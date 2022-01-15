@@ -25,7 +25,7 @@ export default function MazeOne() {
   } = useMap(MapOne);
 
   useEffect(() => {
-    setCurrentMazeName("Maze Three");
+    setCurrentMazeName("Snowy Blizzard");
   });
 
   return (
@@ -33,7 +33,7 @@ export default function MazeOne() {
       <div className={classes["maze-one"]}>
         <SnowyMapHandler grid={grid} />
         <div className={classes.controls}>
-          <h4>Maze One</h4>
+          <h4>Snowy Blizzard</h4>
           <div>{`Score: ${trueScore}`}</div>
           <div>
             <Timer

@@ -19,7 +19,7 @@ export default function Home() {
                 }}
               >
                 <option>Select a Maze</option>
-                <option>Maze One</option>
+                <option>Snowy Blizzard</option>
                 <option>Beach</option>
                 <option>Grassy Castle</option>
                 <option>Dungeon</option>

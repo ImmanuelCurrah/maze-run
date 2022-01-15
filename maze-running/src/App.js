@@ -20,7 +20,7 @@ function App() {
       {toggled && <Links onOpenLinks={toggleHandler} />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Maze%20One" element={<MazeOne />} />
+        <Route path="/Snowy%20Blizzard" element={<MazeOne />} />
         <Route path="/Beach" element={<MazeTwo />} />
         <Route path="/Grassy%20Castle" element={<MazeThree />} />
         <Route path="/Dungeon" element={<MazeFour />} />
