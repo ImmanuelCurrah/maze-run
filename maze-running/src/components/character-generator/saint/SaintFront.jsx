@@ -1,5 +1,5 @@
 import saintFront from "../../assets/characters/saint/saint-front.png";
-import classes from "./SaintFront.module.css";
+import classes from "./Saint.module.css";
 
 export default function SaintFront() {
   return (

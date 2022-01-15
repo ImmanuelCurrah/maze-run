@@ -1,5 +1,5 @@
 import saintBack from "../../assets/characters/saint/saint-back.png";
-import classes from "./SaintBack.module.css";
+import classes from "./Saint.module.css";
 
 export default function SaintBack() {
   return (

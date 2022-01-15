@@ -1,5 +1,5 @@
 import saintLeft from "../../assets/characters/saint/saint-left.png";
-import classes from "./SaintLeft.module.css";
+import classes from "./Saint.module.css";
 
 export default function SaintLeft() {
   return (

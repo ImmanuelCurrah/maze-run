@@ -1,5 +1,5 @@
 import princessRight from "../../assets/characters/snowy-princess/snowy-princess-right.png";
-import classes from "./SnowPrincessRight.module.css";
+import classes from "./SnowPrincess.module.css";
 
 export default function SnowPrincessRight() {
   return (

@@ -1,5 +1,5 @@
 import reddude from "../../assets/characters/red-dude/red-dude-front.png";
-import classes from "./RedDudeFront.module.css";
+import classes from "./RedDude.module.css";
 
 export default function RedDudeFront() {
   return (
