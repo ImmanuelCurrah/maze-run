@@ -1,11 +1,11 @@
-import BlueWitch from "../character-generator/BlueWitch";
+import BlueWitch from "../character-generator/blue-witch/BlueWitch";
 import FloorTile from "../mapHandlers/FloorTile";
 import Wall from "../mapHandlers/Wall";
 import EndPoint from "../mapHandlers/EndPoint";
 import FinishedGame from "../mapHandlers/FinishedGame";
-import BlueWitchFront from "../character-generator/BlueWitchFront";
-import BlueWitchRight from "../character-generator/BlueWitchRight";
-import BlueWitchLeft from "../character-generator/BlueWitchLeft";
+import BlueWitchFront from "../character-generator/blue-witch/BlueWitchFront";
+import BlueWitchRight from "../character-generator/blue-witch/BlueWitchRight";
+import BlueWitchLeft from "../character-generator/blue-witch/BlueWitchLeft";
 
 export default function MapHandler({ grid }) {
   return grid.map((row, rowID) => {

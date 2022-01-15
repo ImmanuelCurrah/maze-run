@@ -1,7 +1,7 @@
-import bluewitch from "../assets/characters/blue-witch/blue-witch-left.gif";
+import bluewitch from "../../assets/characters/blue-witch/blue-witch-front.gif";
 import classes from "./BlueWitch.module.css";
 
-export default function BlueWitchLeft() {
+export default function BlueWitchFront() {
   return (
     <div className={classes.bluewitch}>
       <img src={bluewitch} alt="a witch on a broom" />

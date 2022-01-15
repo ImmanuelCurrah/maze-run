@@ -1,4 +1,4 @@
-import bluewitch from "../assets/characters/blue-witch/blue-witch-right.gif";
+import bluewitch from "../../assets/characters/blue-witch/blue-witch-right.gif";
 import classes from "./BlueWitch.module.css";
 
 export default function BlueWitchRight() {
