@@ -21,10 +21,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Maze%20One" element={<MazeOne />} />
-        <Route path="/Maze%20Two" element={<MazeTwo />} />
+        <Route path="/Beach" element={<MazeTwo />} />
         <Route path="/Maze%20Three" element={<MazeThree />} />
-        <Route path="/Maze%20Four" element={<MazeFour />} />
-        <Route path="/maze-random" element={"Random Maze"} />
+        <Route path="/Dungeon" element={<MazeFour />} />
         <Route path="/highscores" element={<HighScores />} />
         <Route path="/:id" element={<HighScoreDetails />} />
       </Routes>

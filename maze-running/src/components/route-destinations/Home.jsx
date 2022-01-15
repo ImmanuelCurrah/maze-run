@@ -19,9 +19,9 @@ export default function Home() {
             >
               <option>Select a Maze</option>
               <option>Maze One</option>
-              <option>Maze Two</option>
+              <option>Beach</option>
               <option>Maze Three</option>
-              <option>Maze Four</option>
+              <option>Dungeon</option>
             </select>
             <Button destination={maze}>
               <div>Start</div>

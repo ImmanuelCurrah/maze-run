@@ -25,7 +25,7 @@ export default function MazeTwo() {
   } = useMap(MapTwo);
 
   useEffect(() => {
-    setCurrentMazeName("Maze Two");
+    setCurrentMazeName("Beach");
   });
 
   return (
@@ -33,7 +33,7 @@ export default function MazeTwo() {
       <div className={classes["maze-two"]}>
         <BeachMapHandler grid={grid} />
         <div className={classes.controls}>
-          <h4>Maze Two</h4>
+          <h4>Beach</h4>
           <div>{`Score: ${trueScore}`}</div>
           <div>
             <Timer

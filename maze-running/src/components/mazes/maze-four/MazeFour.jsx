@@ -25,7 +25,7 @@ export default function MazeOne() {
   } = useMap(MapFour);
 
   useEffect(() => {
-    setCurrentMazeName("Maze Four");
+    setCurrentMazeName("Dungeon");
   });
 
   return (
@@ -33,7 +33,7 @@ export default function MazeOne() {
       <div className={classes["maze-four"]}>
         <DungeonMapHandler grid={grid} />
         <div className={classes.controls}>
-          <h4>Maze Four</h4>
+          <h4>Dungeon</h4>
           <div>{`Score: ${trueScore}`}</div>
           <div>
             <Timer
