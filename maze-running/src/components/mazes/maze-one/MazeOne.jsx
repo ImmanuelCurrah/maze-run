@@ -1,6 +1,6 @@
 import { Fragment, useEffect } from "react";
 import { grid as MapOne } from "../maze-one/MazeOneConstants";
-import MapHandler from "../../map/MapHandler";
+import SnowyMapHandler from "../../map/SnowyMapHandler";
 import Arrow from "../../UI/Arrow";
 import { useMap } from "../../hooks/useMap";
 
@@ -31,7 +31,7 @@ export default function MazeOne() {
   return (
     <Fragment>
       <div className={classes["maze-one"]}>
-        <MapHandler grid={grid} />
+        <SnowyMapHandler grid={grid} />
         <div className={classes.controls}>
           <h4>Maze One</h4>
           <div>{`Score: ${trueScore}`}</div>

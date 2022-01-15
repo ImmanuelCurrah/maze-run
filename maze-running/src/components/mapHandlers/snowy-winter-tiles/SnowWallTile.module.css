@@ -1,0 +1,6 @@
+.floor-tile {
+  width: 32px;
+  height: 32px;
+  background: url("../../assets/mazes/snowy-maze-pics/ice-wall-tile.png");
+  background-color: white;
+}
