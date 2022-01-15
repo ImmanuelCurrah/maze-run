@@ -31,11 +31,13 @@ export default function HighScoreDetails() {
       <div className={classes.highscoredetails}>
         <h1>High Score Detail</h1>
         <Card>
-          <h4>{singleScore.name}</h4>
-          <h4>{singleScore.score}</h4>
-          <h4>{singleScore.time}</h4>
+          <h4>{`Score: ${singleScore.score}`}</h4>
+          <h4>{`Time :${singleScore.time}`}</h4>
           <h4>{singleScore.maze}</h4>
-          <Button onClick={deleteScore}>Delete Score</Button>
+          <div className={classes.back}>
+            <Button onClick={deleteScore}>Delete Score</Button>
+            <Button destination={"highscores"}>Back</Button>
+          </div>
         </Card>
       </div>
     </Fragment>

@@ -31,3 +31,10 @@
   justify-content: space-around;
   color: white;
 }
+
+@media screen and (min-width: 992px) {
+  .maze-one {
+    justify-content: center;
+    margin-top: 75px;
+  }
+}

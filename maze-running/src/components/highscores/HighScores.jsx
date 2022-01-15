@@ -37,7 +37,7 @@ export default function HighScores() {
           return (
             <Card key={score.id}>
               <h4>{`${score.fields.maze}`}</h4>
-              <h4>{`a MASSIVE score of: ${score.fields.score}`}</h4>
+              <h4>{score.fields.score}</h4>
               <Button destination={score.id}>See Details</Button>
             </Card>
           );
