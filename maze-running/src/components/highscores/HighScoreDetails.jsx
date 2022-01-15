@@ -18,7 +18,8 @@ export default function HighScoreDetails() {
       setSingleScore(response.data.fields);
     };
     fetchScoreHandler();
-  }, [params.id]);
+    //eslint-disabled-next-line
+  }, []);
 
   const deleteScore = async () => {
     await api.delete(params.id);
