@@ -1,17 +1,17 @@
 import { Fragment, useEffect } from "react";
-import { grid as MapThree } from "../maze-three/MazeThreeConstants";
-import MapHandler from "../../map/MapHandler";
+import { grid as MapTwo } from "../beach/MazeTwoConstants";
+import BeachMapHandler from "../../map/BeachMapHandler";
 import Arrow from "../../UI/Arrow";
 import { useMap } from "../../hooks/useMap";
 
-import classes from "./MazeThree.module.css";
+import classes from "./MazeTwo.module.css";
 import rightArrow from "../../assets/arrows/right-arrow.png";
 import leftArrow from "../../assets/arrows/left-arrow.png";
 import upArrow from "../../assets/arrows/up-arrow.png";
 import downArrow from "../../assets/arrows/down-arrow.png";
 import Timer from "../../highscores/Timer";
 
-export default function MazeThree() {
+export default function MazeTwo() {
   const {
     grid,
     moveUp,
@@ -22,18 +22,18 @@ export default function MazeThree() {
     recordTimerHandler,
     setCurrentMazeName,
     trueScore,
-  } = useMap(MapThree);
+  } = useMap(MapTwo);
 
   useEffect(() => {
-    setCurrentMazeName("Grassy Castle");
+    setCurrentMazeName("Beach");
   });
 
   return (
     <Fragment>
-      <div className={classes["maze-three"]}>
-        <MapHandler grid={grid} />
+      <div className={classes["maze-two"]}>
+        <BeachMapHandler grid={grid} />
         <div className={classes.controls}>
-          <h4>Grassy Castle</h4>
+          <h4>Beach</h4>
           <div>{`Score: ${trueScore}`}</div>
           <div>
             <Timer

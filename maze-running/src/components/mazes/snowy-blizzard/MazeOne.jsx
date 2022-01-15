@@ -1,17 +1,17 @@
 import { Fragment, useEffect } from "react";
-import { grid as MapTwo } from "../maze-two/MazeTwoConstants";
-import BeachMapHandler from "../../map/BeachMapHandler";
+import { grid as MapOne } from "./MazeOneConstants";
+import SnowyMapHandler from "../../map/SnowyMapHandler";
 import Arrow from "../../UI/Arrow";
 import { useMap } from "../../hooks/useMap";
 
-import classes from "./MazeTwo.module.css";
+import classes from "./MazeOne.module.css";
 import rightArrow from "../../assets/arrows/right-arrow.png";
 import leftArrow from "../../assets/arrows/left-arrow.png";
 import upArrow from "../../assets/arrows/up-arrow.png";
 import downArrow from "../../assets/arrows/down-arrow.png";
 import Timer from "../../highscores/Timer";
 
-export default function MazeTwo() {
+export default function MazeOne() {
   const {
     grid,
     moveUp,
@@ -22,18 +22,18 @@ export default function MazeTwo() {
     recordTimerHandler,
     setCurrentMazeName,
     trueScore,
-  } = useMap(MapTwo);
+  } = useMap(MapOne);
 
   useEffect(() => {
-    setCurrentMazeName("Beach");
+    setCurrentMazeName("Snowy Blizzard");
   });
 
   return (
     <Fragment>
-      <div className={classes["maze-two"]}>
-        <BeachMapHandler grid={grid} />
+      <div className={classes["maze-one"]}>
+        <SnowyMapHandler grid={grid} />
         <div className={classes.controls}>
-          <h4>Beach</h4>
+          <h4>Snowy Blizzard</h4>
           <div>{`Score: ${trueScore}`}</div>
           <div>
             <Timer

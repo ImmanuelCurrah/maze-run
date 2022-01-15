@@ -1,10 +1,10 @@
 import { Fragment, useEffect } from "react";
-import { grid as MapOne } from "../maze-one/MazeOneConstants";
-import SnowyMapHandler from "../../map/SnowyMapHandler";
-import Arrow from "../../UI/Arrow";
+import { grid as MapFour } from "../dungeon/MazeFourConstants";
+import DungeonMapHandler from "../../map/DungeonMapHandler";
 import { useMap } from "../../hooks/useMap";
+import Arrow from "../../UI/Arrow";
+import classes from "./MazeFour.module.css";
 
-import classes from "./MazeOne.module.css";
 import rightArrow from "../../assets/arrows/right-arrow.png";
 import leftArrow from "../../assets/arrows/left-arrow.png";
 import upArrow from "../../assets/arrows/up-arrow.png";
@@ -22,18 +22,18 @@ export default function MazeOne() {
     recordTimerHandler,
     setCurrentMazeName,
     trueScore,
-  } = useMap(MapOne);
+  } = useMap(MapFour);
 
   useEffect(() => {
-    setCurrentMazeName("Snowy Blizzard");
+    setCurrentMazeName("Dungeon");
   });
 
   return (
     <Fragment>
-      <div className={classes["maze-one"]}>
-        <SnowyMapHandler grid={grid} />
+      <div className={classes["maze-four"]}>
+        <DungeonMapHandler grid={grid} />
         <div className={classes.controls}>
-          <h4>Snowy Blizzard</h4>
+          <h4>Dungeon</h4>
           <div>{`Score: ${trueScore}`}</div>
           <div>
             <Timer
