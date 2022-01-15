@@ -13,7 +13,7 @@ export const useMap = (map) => {
   const [score, setScore] = useState(0);
 
   let trueScore = score + lastSecond + lastMinute * 60;
-  console.log(toggleMap);
+  // console.log(toggleMap);
 
   const { timeHandler } = useGetHighScoresUpdate(stopGame);
   const navigate = useNavigate();

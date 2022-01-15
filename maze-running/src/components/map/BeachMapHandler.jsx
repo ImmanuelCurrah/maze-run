@@ -1,12 +1,11 @@
-import SaintBack from "../character-generator/saint/SaintBack";
 import DeckTwoTile from "../mapHandlers/beach-tiles/DeckTwoTile";
 import OceanTile from "../mapHandlers/beach-tiles/OceanTile";
 import EndPoint from "../mapHandlers/chest-tiles/EndPoint";
 import FinishedGame from "../mapHandlers/chest-tiles/FinishedGame";
-import SaintFront from "../character-generator/saint/SaintFront";
+import RedDudeBack from "../character-generator/red-dude/RedDudeBack";
+import RedDudeFront from "../character-generator/red-dude/RedDudeFront";
 import RedDudeRight from "../character-generator/red-dude/RedDudeRight";
-import SaintLeft from "../character-generator/saint/SaintLeft";
-import TopBottomWallTile from "../mapHandlers/dungeon-tiles/TopBottomWallTile";
+import RedDudeLeft from "../character-generator/red-dude/RedDudeLeft";
 
 export default function BeachMapHandler({ grid }) {
   return grid.map((row, rowID) => {
@@ -15,16 +14,14 @@ export default function BeachMapHandler({ grid }) {
         {row.map((node, nodeId) => {
           if (node === 2) {
             return <OceanTile key={nodeId} />;
-          } else if (node === 9) {
-            return <TopBottomWallTile key={nodeId} />;
           } else if (node === 3) {
-            return <SaintBack key={nodeId} />;
+            return <RedDudeBack key={nodeId} />;
           } else if (node === 6) {
-            return <SaintFront key={nodeId} />;
+            return <RedDudeFront key={nodeId} />;
           } else if (node === 7) {
             return <RedDudeRight key={nodeId} />;
           } else if (node === 8) {
-            return <SaintLeft key={nodeId} />;
+            return <RedDudeLeft key={nodeId} />;
           } else if (node === 4) {
             return <EndPoint key={nodeId} />;
           } else if (node === 5) {
