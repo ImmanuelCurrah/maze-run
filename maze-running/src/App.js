@@ -22,7 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Maze%20One" element={<MazeOne />} />
         <Route path="/Beach" element={<MazeTwo />} />
-        <Route path="/Maze%20Three" element={<MazeThree />} />
+        <Route path="/Grassy%20Castle" element={<MazeThree />} />
         <Route path="/Dungeon" element={<MazeFour />} />
         <Route path="/highscores" element={<HighScores />} />
         <Route path="/:id" element={<HighScoreDetails />} />

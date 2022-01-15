@@ -25,7 +25,7 @@ export default function MazeThree() {
   } = useMap(MapThree);
 
   useEffect(() => {
-    setCurrentMazeName("Maze Three");
+    setCurrentMazeName("Grassy Castle");
   });
 
   return (
@@ -33,7 +33,7 @@ export default function MazeThree() {
       <div className={classes["maze-three"]}>
         <MapHandler grid={grid} />
         <div className={classes.controls}>
-          <h4>Maze Three</h4>
+          <h4>Grassy Castle</h4>
           <div>{`Score: ${trueScore}`}</div>
           <div>
             <Timer

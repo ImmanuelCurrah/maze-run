@@ -6,7 +6,7 @@ export default function NavBar(props) {
   return (
     <nav className={classes.nav}>
       <Link className={classes.home} to="/">
-        Broom Zoom!
+        Maze Running
       </Link>
       <div onClick={props.onOpenLinks}>
         <Hamburger />

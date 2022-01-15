@@ -9,7 +9,7 @@ export default function Home() {
     <Fragment>
       <div className={classes.home}>
         <div className={classes.content}>
-          <h1>Welcome to Broom Zoom!</h1>
+          <h1>Welcome to Maze Running!</h1>
           <div>
             <select
               className={classes.select}
@@ -20,7 +20,7 @@ export default function Home() {
               <option>Select a Maze</option>
               <option>Maze One</option>
               <option>Beach</option>
-              <option>Maze Three</option>
+              <option>Grassy Castle</option>
               <option>Dungeon</option>
             </select>
             <Button destination={maze}>
