@@ -7,25 +7,27 @@ export default function Home() {
 
   return (
     <Fragment>
-      <div className={classes.home}>
-        <div className={classes.content}>
-          <h1>Welcome to Maze Running!</h1>
-          <div>
-            <select
-              className={classes.select}
-              onChange={(e) => {
-                setMaze(e.target.value);
-              }}
-            >
-              <option>Select a Maze</option>
-              <option>Maze One</option>
-              <option>Beach</option>
-              <option>Grassy Castle</option>
-              <option>Dungeon</option>
-            </select>
-            <Button destination={maze}>
-              <div>Start</div>
-            </Button>
+      <div className={classes.desktop}>
+        <div className={classes.home}>
+          <div className={classes.content}>
+            <h1>Welcome to Maze Running!</h1>
+            <div>
+              <select
+                className={classes.select}
+                onChange={(e) => {
+                  setMaze(e.target.value);
+                }}
+              >
+                <option>Select a Maze</option>
+                <option>Maze One</option>
+                <option>Beach</option>
+                <option>Grassy Castle</option>
+                <option>Dungeon</option>
+              </select>
+              <Button destination={maze}>
+                <div>Start</div>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

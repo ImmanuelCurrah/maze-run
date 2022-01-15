@@ -6,6 +6,7 @@
   height: 100vh;
   color: white;
   font-family: "Orbitron", sans-serif;
+  background-repeat: no-repeat;
 }
 
 .content {
@@ -20,4 +21,36 @@
   width: 200px;
   border-radius: 10px;
   border: 2px solid black;
+}
+
+@media screen and (min-width: 992px) {
+  .home {
+    background: none;
+  }
+
+  .desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1280px;
+    background: url("../assets/background-images/desktop-background.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+
+  .content {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+  }
+
+  .select {
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 15px;
+  }
 }
