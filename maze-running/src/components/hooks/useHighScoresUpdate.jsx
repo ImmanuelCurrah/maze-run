@@ -16,7 +16,7 @@ export const useGetHighScoresUpdate = (stopGame) => {
         ...prevTime,
         score: trueScore,
         time:
-          seconds < 10
+          seconds < 9
             ? `${minutes}:0${seconds + 1}`
             : `${minutes}:${seconds + 1}`,
         maze: mazeName,

@@ -35,7 +35,7 @@ export default function Timer({ startGame, recordTimerHandler }) {
   return (
     <div>
       <div className={classes.timer}>
-        {seconds < 10 ? `${minutes}:0${seconds}` : `${minutes}:${seconds}`}
+        {seconds <= 9 ? `${minutes}:0${seconds}` : `${minutes}:${seconds}`}
       </div>
     </div>
   );
