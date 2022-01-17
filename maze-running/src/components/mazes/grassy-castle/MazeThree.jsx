@@ -25,6 +25,10 @@ export default function MazeThree() {
   } = useMap(MapThree);
 
   useEffect(() => {
+    document.addEventListener("keydown", moveRight);
+  }, []);
+
+  useEffect(() => {
     setCurrentMazeName("Grassy Castle");
   });
 
