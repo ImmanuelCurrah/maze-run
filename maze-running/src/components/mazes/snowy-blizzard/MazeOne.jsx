@@ -56,28 +56,32 @@ export default function MazeOne() {
     <Fragment>
       <div className={classes["maze-one"]}>
         <SnowyMapHandler grid={grid} />
-        <div className={classes.controls}>
-          <h4>Snowy Blizzard</h4>
-          <div>{`Score: ${trueScore}`}</div>
-          <div>
-            <Timer
-              startGame={startGame}
-              recordTimerHandler={recordTimerHandler}
-              moveAround={moveAroundBat}
-              grid={MapOne}
-            />
+        <div className={classes.container}>
+          <div className={classes.info}>
+            <h4>Snowy Blizzard</h4>
+            <div>{`Score: ${trueScore}`}</div>
+            <div>
+              <Timer
+                startGame={startGame}
+                recordTimerHandler={recordTimerHandler}
+                moveAround={moveAroundBat}
+                grid={MapOne}
+              />
+            </div>
           </div>
-          <div className={classes.arrows}>
-            <div>
-              <Arrow src={upArrow} onClick={moveUp} direction={3} />
-            </div>
-            <div className={classes["left-right"]}>
-              <Arrow src={leftArrow} onClick={moveLeft} direction={8} />
-              <Arrow src={rightArrow} onClick={moveRight} direction={7} />
-            </div>
+          <div className={classes.controls}>
+            <div className={classes.arrows}>
+              <div>
+                <Arrow src={upArrow} onClick={moveUp} direction={3} />
+              </div>
+              <div className={classes["left-right"]}>
+                <Arrow src={leftArrow} onClick={moveLeft} direction={8} />
+                <Arrow src={rightArrow} onClick={moveRight} direction={7} />
+              </div>
 
-            <div>
-              <Arrow src={downArrow} onClick={moveDown} direction={6} />
+              <div>
+                <Arrow src={downArrow} onClick={moveDown} direction={6} />
+              </div>
             </div>
           </div>
         </div>

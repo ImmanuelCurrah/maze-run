@@ -24,7 +24,7 @@
 }
 
 .controls {
-  height: 300px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,9 +32,23 @@
   color: white;
 }
 
+.info {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  margin-bottom: 10px;
+}
+
 @media screen and (min-width: 992px) {
   .maze-two {
     justify-content: center;
     margin-top: 75px;
+  }
+
+  .controls {
+    display: none;
   }
 }
