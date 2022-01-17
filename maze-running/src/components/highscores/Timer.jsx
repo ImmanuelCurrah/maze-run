@@ -24,7 +24,7 @@ export default function Timer({ startGame, recordTimerHandler, moveAround }) {
 
   useEffect(() => {
     recordTimerHandler(seconds, minutes);
-    moveAround();
+    moveAround(10);
     //eslint-ignore-next-line
   }, [seconds]);
 

@@ -29,53 +29,77 @@ export const useMap = (map) => {
     }
   };
 
-  const moveAround = () => {
+  const moveAroundBat = (characterNumber) => {
     let length = grid.length;
     let loopRow = 0;
     let loopCol = 0;
-    let randomMovement;
+
+    //decides the direction to move
     const randomDirection = Math.floor(Math.random() * 2) + 1;
+    const trueRandomDirection = Math.floor(Math.random() * 8) + 1;
+    console.log(trueRandomDirection);
 
     for (let i = 0; i < length; i++) {
       for (let j = 0; j < length; j++) {
-        if (grid[i][j] === 10) {
+        if (grid[i][j] === characterNumber) {
           loopRow = i;
           loopCol = j;
         }
       }
     }
-    if (
-      grid[loopRow][loopCol - 1] === 2 ||
-      grid[loopRow][loopCol + 1] === 9 ||
-      grid[loopRow][loopCol - 1] === 9 ||
-      grid[loopRow][loopCol + 1] === 2
-    ) {
-      if (grid[loopRow][loopCol + 1] === 2) {
-        const newGrid = grid;
-        console.log(randomMovement);
-        grid[loopRow][loopCol - 1] = 10;
-        grid[loopRow][loopCol] = 1;
-        setGrid(newGrid);
-      } else if (grid[loopRow][loopCol - 1] === 2) {
-        const newGrid = grid;
-        console.log(randomMovement);
-        grid[loopRow][loopCol + 1] = 10;
-        grid[loopRow][loopCol] = 1;
-        setGrid(newGrid);
-      }
-      return;
-    } else {
-      if (randomDirection === 1) {
-        randomMovement = loopCol - 1;
-      } else {
-        randomMovement = loopCol + 1;
-      }
 
-      const newGrid = grid;
-      console.log(randomMovement);
-      grid[loopRow][randomMovement] = 10;
-      grid[loopRow][loopCol] = 1;
-      setGrid(newGrid);
+    if (trueRandomDirection === 1 || trueRandomDirection === 8) {
+      if (
+        grid[loopRow][loopCol - 1] === 2 ||
+        grid[loopRow][loopCol - 1] === 4 ||
+        grid[loopRow][loopCol - 1] === 9
+      ) {
+        return;
+      } else {
+        const newGrid = grid;
+        grid[loopRow][loopCol - 1] = characterNumber;
+        grid[loopRow][loopCol] = 1;
+        setGrid(newGrid);
+      }
+    } else if (trueRandomDirection === 2 || trueRandomDirection === 7) {
+      if (
+        grid[loopRow][loopCol + 1] === 2 ||
+        grid[loopRow][loopCol + 1] === 4 ||
+        grid[loopRow][loopCol + 1] === 9
+      ) {
+        return;
+      } else {
+        const newGrid = grid;
+        grid[loopRow][loopCol + 1] = characterNumber;
+        grid[loopRow][loopCol] = 1;
+        setGrid(newGrid);
+      }
+    } else if (trueRandomDirection === 3 || trueRandomDirection === 6) {
+      if (
+        grid[loopRow - 1][loopCol] === 2 ||
+        grid[loopRow - 1][loopCol] === 4 ||
+        grid[loopRow - 1][loopCol] === 9
+      ) {
+        return;
+      } else {
+        const newGrid = grid;
+        grid[loopRow - 1][loopCol] = characterNumber;
+        grid[loopRow][loopCol] = 1;
+        setGrid(newGrid);
+      }
+    } else if (trueRandomDirection === 4 || trueRandomDirection === 5) {
+      if (
+        grid[loopRow + 1][loopCol] === 2 ||
+        grid[loopRow + 1][loopCol] === 4 ||
+        grid[loopRow + 1][loopCol] === 9
+      ) {
+        return;
+      } else {
+        const newGrid = grid;
+        grid[loopRow + 1][loopCol] = characterNumber;
+        grid[loopRow][loopCol] = 1;
+        setGrid(newGrid);
+      }
     }
   };
 
@@ -223,6 +247,6 @@ export const useMap = (map) => {
     setCurrentMazeName,
     setStopGame,
     trueScore,
-    moveAround,
+    moveAroundBat,
   };
 };

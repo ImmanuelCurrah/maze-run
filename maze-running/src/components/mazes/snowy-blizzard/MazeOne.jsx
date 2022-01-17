@@ -22,7 +22,7 @@ export default function MazeOne() {
     recordTimerHandler,
     setCurrentMazeName,
     trueScore,
-    moveAround,
+    moveAroundBat,
   } = useMap(MapOne);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function MazeOne() {
             <Timer
               startGame={startGame}
               recordTimerHandler={recordTimerHandler}
-              moveAround={moveAround}
+              moveAround={moveAroundBat}
             />
           </div>
           <div className={classes.arrows}>
