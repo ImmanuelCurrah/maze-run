@@ -3,13 +3,12 @@ import { useState, useEffect } from "react";
 export const useMoveAround = (map) => {
   const [grid, setGrid] = useState(map);
 
-  const moveAroundBat = (characterNumber) => {
+  const moveAround = (characterNumber) => {
     let length = grid.length;
     let loopRow = 0;
     let loopCol = 0;
 
     const trueRandomDirection = Math.floor(Math.random() * 8) + 1;
-    console.log(trueRandomDirection);
 
     for (let i = 0; i < length; i++) {
       for (let j = 0; j < length; j++) {
@@ -37,8 +36,6 @@ export const useMoveAround = (map) => {
         grid[loopRow][loopCol - 1] === 9
       ) {
         return;
-      } else if (grid[loopRow][loopCol - 1] === 3) {
-        console.log("you lost");
       } else {
         const newGrid = grid;
         grid[loopRow][loopCol - 1] = characterNumber;
@@ -52,8 +49,6 @@ export const useMoveAround = (map) => {
         grid[loopRow][loopCol + 1] === 9
       ) {
         return;
-      } else if (grid[loopRow][loopCol + 1] === 3) {
-        console.log("you lost");
       } else {
         const newGrid = grid;
         grid[loopRow][loopCol + 1] = characterNumber;
@@ -67,8 +62,6 @@ export const useMoveAround = (map) => {
         grid[loopRow - 1][loopCol] === 9
       ) {
         return;
-      } else if (grid[loopRow - 1][loopCol] === 3) {
-        console.log("you lost");
       } else {
         const newGrid = grid;
         grid[loopRow - 1][loopCol] = characterNumber;
@@ -82,8 +75,6 @@ export const useMoveAround = (map) => {
         grid[loopRow + 1][loopCol] === 9
       ) {
         return;
-      } else if (grid[loopRow + 1][loopCol] === 3) {
-        console.log("you lost");
       } else {
         const newGrid = grid;
         grid[loopRow + 1][loopCol] = characterNumber;
@@ -92,5 +83,5 @@ export const useMoveAround = (map) => {
       }
     }
   };
-  return { moveAroundBat };
+  return { moveAround };
 };

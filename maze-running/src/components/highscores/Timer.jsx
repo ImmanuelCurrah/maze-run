@@ -5,10 +5,12 @@ import { useMoveAround } from "../hooks/useRandomMovement";
 export default function Timer({ startGame, recordTimerHandler, grid }) {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
+  const [gameTick, setGameTick] = useState(false);
 
-  const { moveAroundBat } = useMoveAround(grid);
+  const { moveAround } = useMoveAround(grid);
 
   let myInterval;
+  let gameTicks;
 
   useEffect(() => {
     const timerHandler = () => {
@@ -16,20 +18,28 @@ export default function Timer({ startGame, recordTimerHandler, grid }) {
         myInterval = setInterval(() => {
           setSeconds((prevSecond) => prevSecond + 1);
         }, 1000);
+        gameTicks = setInterval(() => {
+          setGameTick((prevGameTick) => !prevGameTick);
+        }, 600);
       }
     };
     timerHandler();
     return () => {
       clearInterval(myInterval);
+      clearInterval(gameTicks);
     };
     //eslint-ignore-next-line
   }, [startGame]);
 
   useEffect(() => {
     recordTimerHandler(seconds, minutes);
-    moveAroundBat(10);
+    // moveAroundBat(10);
     //eslint-ignore-next-line
   }, [seconds]);
+
+  useEffect(() => {
+    moveAround(10);
+  }, [gameTick]);
 
   if (seconds === 60) {
     setMinutes((prevMinute) => prevMinute + 1);
