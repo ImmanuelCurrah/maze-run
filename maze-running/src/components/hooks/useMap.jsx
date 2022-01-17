@@ -29,6 +29,56 @@ export const useMap = (map) => {
     }
   };
 
+  const moveAround = () => {
+    let length = grid.length;
+    let loopRow = 0;
+    let loopCol = 0;
+    let randomMovement;
+    const randomDirection = Math.floor(Math.random() * 2) + 1;
+
+    for (let i = 0; i < length; i++) {
+      for (let j = 0; j < length; j++) {
+        if (grid[i][j] === 10) {
+          loopRow = i;
+          loopCol = j;
+        }
+      }
+    }
+    if (
+      grid[loopRow][loopCol - 1] === 2 ||
+      grid[loopRow][loopCol + 1] === 9 ||
+      grid[loopRow][loopCol - 1] === 9 ||
+      grid[loopRow][loopCol + 1] === 2
+    ) {
+      if (grid[loopRow][loopCol + 1] === 2) {
+        const newGrid = grid;
+        console.log(randomMovement);
+        grid[loopRow][loopCol - 1] = 10;
+        grid[loopRow][loopCol] = 1;
+        setGrid(newGrid);
+      } else if (grid[loopRow][loopCol - 1] === 2) {
+        const newGrid = grid;
+        console.log(randomMovement);
+        grid[loopRow][loopCol + 1] = 10;
+        grid[loopRow][loopCol] = 1;
+        setGrid(newGrid);
+      }
+      return;
+    } else {
+      if (randomDirection === 1) {
+        randomMovement = loopCol - 1;
+      } else {
+        randomMovement = loopCol + 1;
+      }
+
+      const newGrid = grid;
+      console.log(randomMovement);
+      grid[loopRow][randomMovement] = 10;
+      grid[loopRow][loopCol] = 1;
+      setGrid(newGrid);
+    }
+  };
+
   // MOVE UP
   const moveUp = (characterNumber) => {
     let length = grid.length;
@@ -173,5 +223,6 @@ export const useMap = (map) => {
     setCurrentMazeName,
     setStopGame,
     trueScore,
+    moveAround,
   };
 };

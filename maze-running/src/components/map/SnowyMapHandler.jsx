@@ -6,6 +6,8 @@ import SnowPrincessBack from "../character-generator/snow-princess/SnowPrincessB
 import SnowPrincessFront from "../character-generator/snow-princess/SnowPrincessFront";
 import SnowPrincessRight from "../character-generator/snow-princess/SnowPrincessRight";
 import SnowPrincessLeft from "../character-generator/snow-princess/SnowPrincessLeft";
+import Bat from "../enemy-generator/Bat";
+import BatOne from "../enemy-generator/BatOne";
 
 export default function BeachMapHandler({ grid }) {
   return grid.map((row, rowID) => {
@@ -26,6 +28,10 @@ export default function BeachMapHandler({ grid }) {
             return <EndPoint key={nodeId} />;
           } else if (node === 5) {
             return <FinishedGame key={nodeId} />;
+          } else if (node === 10) {
+            return <Bat key={nodeId} />;
+          } else if (node === 11) {
+            return <BatOne key={nodeId} />;
           } else {
             return <SnowyFloorTile key={nodeId} />;
           }

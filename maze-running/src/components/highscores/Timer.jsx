@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import classes from "./Timer.module.css";
 
-export default function Timer({ startGame, recordTimerHandler }) {
+export default function Timer({ startGame, recordTimerHandler, moveAround }) {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
 
@@ -24,6 +24,7 @@ export default function Timer({ startGame, recordTimerHandler }) {
 
   useEffect(() => {
     recordTimerHandler(seconds, minutes);
+    moveAround();
     //eslint-ignore-next-line
   }, [seconds]);
 

@@ -1,0 +1,6 @@
+.bat {
+  height: 32px;
+  width: 32px;
+  background: url(../assets/mazes/snowy-maze-pics/snowy-wall.png);
+  background-color: white;
+}
