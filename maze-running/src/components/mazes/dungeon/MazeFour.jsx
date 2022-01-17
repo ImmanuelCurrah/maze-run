@@ -45,6 +45,7 @@ export default function MazeOne() {
         moveCharacter(e);
       });
     };
+    //eslint-ignore-next-line
   }, []);
 
   useEffect(() => {

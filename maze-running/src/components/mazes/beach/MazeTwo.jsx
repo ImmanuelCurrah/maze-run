@@ -45,6 +45,7 @@ export default function MazeTwo() {
         moveCharacter(e);
       });
     };
+    //eslint-ignore-next-line
   }, []);
 
   useEffect(() => {
