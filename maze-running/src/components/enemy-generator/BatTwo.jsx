@@ -3,7 +3,7 @@ import bat from "../assets/enemies/bat.gif";
 
 export default function Bat() {
   return (
-    <div className={classes.bat}>
+    <div className={classes.beach}>
       <img src={bat} alt="a flying pixel bat" />
     </div>
   );

@@ -6,7 +6,7 @@ import RedDudeBack from "../character-generator/red-dude/RedDudeBack";
 import RedDudeFront from "../character-generator/red-dude/RedDudeFront";
 import RedDudeRight from "../character-generator/red-dude/RedDudeRight";
 import RedDudeLeft from "../character-generator/red-dude/RedDudeLeft";
-import Bat from "../enemy-generator/Bat";
+import BatTwo from "../enemy-generator/BatTwo";
 
 export default function BeachMapHandler({ grid }) {
   return grid.map((row, rowID) => {
@@ -27,6 +27,8 @@ export default function BeachMapHandler({ grid }) {
             return <EndPoint key={nodeId} />;
           } else if (node === 5) {
             return <FinishedGame key={nodeId} />;
+          } else if (node === 10) {
+            return <BatTwo key={nodeId} />;
           } else {
             return <DeckTwoTile key={nodeId} />;
           }

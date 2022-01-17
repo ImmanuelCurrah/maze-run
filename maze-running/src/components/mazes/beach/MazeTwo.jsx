@@ -39,6 +39,7 @@ export default function MazeTwo() {
             <Timer
               startGame={startGame}
               recordTimerHandler={recordTimerHandler}
+              grid={MapTwo}
             />
           </div>
           <div className={classes.arrows}>

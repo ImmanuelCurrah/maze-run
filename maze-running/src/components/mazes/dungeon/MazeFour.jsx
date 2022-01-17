@@ -39,6 +39,7 @@ export default function MazeOne() {
             <Timer
               startGame={startGame}
               recordTimerHandler={recordTimerHandler}
+              grid={MapFour}
             />
           </div>
           <div className={classes.arrows}>

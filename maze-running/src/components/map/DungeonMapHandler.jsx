@@ -7,6 +7,7 @@ import SaintFront from "../character-generator/saint/SaintFront";
 import SaintRight from "../character-generator/saint/SaintRight";
 import SaintLeft from "../character-generator/saint/SaintLeft";
 import TopBottomWallTile from "../mapHandlers/dungeon-tiles/TopBottomWallTile";
+import BatThree from "../enemy-generator/BatThree";
 
 export default function DungeonMapHandler({ grid }) {
   return grid.map((row, rowID) => {
@@ -29,6 +30,8 @@ export default function DungeonMapHandler({ grid }) {
             return <EndPoint key={nodeId} />;
           } else if (node === 5) {
             return <FinishedGame key={nodeId} />;
+          } else if (node === 10) {
+            return <BatThree key={nodeId} />;
           } else {
             return <FloorTileD key={nodeId}></FloorTileD>;
           }

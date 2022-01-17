@@ -5,8 +5,21 @@
   background-color: white;
 }
 
-.test {
+.grassy {
   height: 32px;
   width: 32px;
   background: url(../assets/mazes/grassy-castle-pics/grass2.png);
+  background-color: green;
+}
+
+.beach {
+  height: 32px;
+  width: 32px;
+  background: url(../assets/mazes/beach-style/sand-maze/deck-two.png);
+}
+
+.dungeon {
+  height: 32px;
+  width: 32px;
+  background: url(../assets/mazes/dungeon-style/red-floor-tile.png);
 }
