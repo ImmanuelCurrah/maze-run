@@ -1,10 +1,10 @@
 # Maze Running
 
-[maze-running.com/whateveritsgoingtobe]()
+[https://peaceful-wiles-aa2f8d.netlify.app/]()
 
 ## Project Description
 
-This project will be a maze game build using react. The main functionality of the game will be a timed maze in which you can choose a character and a maze to participate in. There will be 4 different mazes that will each have a different theme. For example, a dungeon theme, or a grassy castle theme. The player will be able to choose between a number of characters. Once these are chosen the player will have a point system based on how much time they spent in the maze and also how many steps are taken. The point system will be tracked in this way; the player will start out with 10,000 points. For each step that they take x amount of points will be deducted. At the end of the maze the time they took will be saved, converted into seconds. And then for each second they spent in the maze another x amount of points will be deducted. Once they complete the maze a modal will pop and ast them for there name and then store their name score and time into the high scores data. There will also be another maze that will be generated randomly that will have its separate high scores along with it.
+This project will be a maze game. The player will start at the beginning and have to evade a number of enemies to get to the chest. Once they open the chest they finish. Once they are done the score and time will be posted into the high scores. Only the best will be shown.
 
 ## Wireframes
 
