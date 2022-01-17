@@ -24,6 +24,29 @@ export default function MazeTwo() {
     trueScore,
   } = useMap(MapTwo);
 
+  const moveCharacter = (e) => {
+    if (e.key === "ArrowRight") {
+      moveRight();
+    } else if (e.key === "ArrowLeft") {
+      moveLeft();
+    } else if (e.key === "ArrowUp") {
+      moveUp();
+    } else if (e.key === "ArrowDown") {
+      moveDown();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", (e) => {
+      moveCharacter(e);
+    });
+    return () => {
+      document.removeEventListener("keydown", (e) => {
+        moveCharacter(e);
+      });
+    };
+  }, []);
+
   useEffect(() => {
     setCurrentMazeName("Beach");
   });

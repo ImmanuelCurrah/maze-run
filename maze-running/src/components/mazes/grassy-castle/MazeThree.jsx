@@ -40,6 +40,11 @@ export default function MazeThree() {
     document.addEventListener("keydown", (e) => {
       moveCharacter(e);
     });
+    return () => {
+      document.removeEventListener("keydown", (e) => {
+        moveCharacter(e);
+      });
+    };
   }, []);
 
   useEffect(() => {
