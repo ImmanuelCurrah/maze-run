@@ -16,7 +16,7 @@ This project will be a maze game. The player will start at the beginning and hav
 
 [This](https://whimsical.com/app-components-hierarchy-B1QLBwQa5x8wacXGaVQPfM) is my component library and how I envision building out the component structure in react.
 
-## API and Data Sample
+## API Data Sample
 
 ```json
 {
@@ -90,25 +90,22 @@ _These are examples only. Replace with your own MVP features._
 | --------------------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Writing up proposal                                       |    H     |      2hrs      |     2hrs      |    2hrs     |
 | Setting up AirTable                                       |    H     |      1hrs      |    2.5hrs     |   2.5hrs    |
-| NavBar setup                                              |    H     |      1hr       |               |             |
-| Drop down menu for mazes                                  |    H     |      2hrs      |               |             |
-| Make drop down menu for character selection               |    H     |      2hrs      |               |             |
-| Make a start button                                       |    H     |      1hr       |               |             |
-| Create all routing in App                                 |    H     |      1hr       |               |             |
-| Create the mazes                                          |    H     |      5hrs      |               |             |
-| Make character models function                            |    H     |      3hrs      |               |             |
-| Create the random maze generator page                     |    M     |      4hrs      |               |             |
-| Style the maze component file                             |    H     |      3hrs      |               |             |
-| Add the mazes to a specific route                         |    H     |      1hr       |               |             |
-| Create character functionality                            |    H     |      2hrs      |               |             |
-| Create win lose conditions and point system               |    H     |      3hrs      |               |             |
-| Create settings component                                 |    M     |      2hrs      |               |             |
-| Create high scores component for each maze                |    H     |      4hrs      |               |             |
-| Create high scores component for random maze              |    M     |      3hrs      |               |             |
-| Post mvp enemies                                          |    M     |      4hrs      |               |             |
-| Post mvp shield and special items                         |    L     |      5hrs      |               |             |
+| NavBar setup                                              |    H     |      1hr       |     3hrs      |    3hrs     |
+| Drop down menu for mazes                                  |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Make a start button                                       |    H     |      1hr       |    1.5hrs     |   1.5hrs    |
+| Create all routing in App                                 |    H     |      1hr       |     1hrs      |    1hrs     |
+| Create the mazes                                          |    H     |      5hrs      |     10hrs     |    10hrs    |
+| Create a timer                                            |    H     |      2hrs      |     6hrs      |    6hrs     |
+| Make character models function                            |    H     |      3hrs      |     6hrs      |    6hrs     |
+| Style the maze component file                             |    H     |      3hrs      |     5hrs      |    5hrs     |
+| Add the mazes to a specific route                         |    H     |      1hr       |     3hrs      |    3hrs     |
+| Create character functionality                            |    H     |      2hrs      |     8hrs      |    8hrs     |
+| Create win lose conditions and point system               |    H     |      3hrs      |     6hrs      |    6hrs     |
+| Create high scores component for each maze                |    H     |      4hrs      |     5hrs      |    5hrs     |
+| Post mvp enemies                                          |    M     |      4hrs      |     8hrs      |    8hrs     |
+| Post mvp shield and special items                         |    L     |      5hrs      |     4hrs      |    4hrs     |
 | Post mvp create multiple levels and add mazes to each one |    L     |      6hrs      |               |             |
-| Total                                                     |    H     |     61hrs      |               |             |
+| Total                                                     |    H     |     46hrs      |     73hrs     |    73hrs    |
 
 ## SWOT Analysis
 
