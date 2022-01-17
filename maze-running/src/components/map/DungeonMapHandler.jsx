@@ -32,6 +32,8 @@ export default function DungeonMapHandler({ grid }) {
             return <FinishedGame key={nodeId} />;
           } else if (node === 10) {
             return <BatThree key={nodeId} />;
+          } else if (node === 11) {
+            return <BatThree key={nodeId} />;
           } else {
             return <FloorTileD key={nodeId}></FloorTileD>;
           }

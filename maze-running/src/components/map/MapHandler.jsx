@@ -29,6 +29,8 @@ export default function MapHandler({ grid }) {
             return <FinishedGame key={nodeId} />;
           } else if (node === 10) {
             return <BatOne key={nodeId} />;
+          } else if (node === 11) {
+            return <BatOne key={nodeId} />;
           } else {
             return <FloorTile key={nodeId}></FloorTile>;
           }

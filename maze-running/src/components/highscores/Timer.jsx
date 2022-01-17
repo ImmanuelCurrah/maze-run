@@ -39,6 +39,7 @@ export default function Timer({ startGame, recordTimerHandler, grid }) {
 
   useEffect(() => {
     moveAround(10);
+    moveAround(11);
   }, [gameTick]);
 
   if (seconds === 60) {

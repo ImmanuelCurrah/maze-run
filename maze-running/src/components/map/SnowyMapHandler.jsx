@@ -29,6 +29,8 @@ export default function BeachMapHandler({ grid }) {
             return <FinishedGame key={nodeId} />;
           } else if (node === 10) {
             return <Bat key={nodeId} />;
+          } else if (node === 11) {
+            return <Bat key={nodeId} />;
           } else {
             return <SnowyFloorTile key={nodeId} />;
           }
