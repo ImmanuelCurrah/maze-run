@@ -39,6 +39,7 @@ export default function MazeThree() {
             <Timer
               startGame={startGame}
               recordTimerHandler={recordTimerHandler}
+              grid={MapThree}
             />
           </div>
           <div className={classes.arrows}>

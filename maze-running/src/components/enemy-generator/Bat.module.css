@@ -4,3 +4,9 @@
   background: url(../assets/mazes/snowy-maze-pics/snowy-wall.png);
   background-color: white;
 }
+
+.test {
+  height: 32px;
+  width: 32px;
+  background: url(../assets/mazes/grassy-castle-pics/grass2.png);
+}

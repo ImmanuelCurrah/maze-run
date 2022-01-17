@@ -6,6 +6,7 @@ import FinishedGame from "../mapHandlers/chest-tiles/FinishedGame";
 import BlueWitchFront from "../character-generator/blue-witch/BlueWitchFront";
 import BlueWitchRight from "../character-generator/blue-witch/BlueWitchRight";
 import BlueWitchLeft from "../character-generator/blue-witch/BlueWitchLeft";
+import Bat from "../enemy-generator/Bat";
 
 export default function MapHandler({ grid }) {
   return grid.map((row, rowID) => {
@@ -26,6 +27,8 @@ export default function MapHandler({ grid }) {
             return <EndPoint key={nodeId} />;
           } else if (node === 5) {
             return <FinishedGame key={nodeId} />;
+          } else if (node === 10) {
+            return <Bat />;
           } else {
             return <FloorTile key={nodeId}></FloorTile>;
           }

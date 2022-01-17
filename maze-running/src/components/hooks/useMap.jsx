@@ -34,8 +34,6 @@ export const useMap = (map) => {
     let loopRow = 0;
     let loopCol = 0;
 
-    //decides the direction to move
-    const randomDirection = Math.floor(Math.random() * 2) + 1;
     const trueRandomDirection = Math.floor(Math.random() * 8) + 1;
     console.log(trueRandomDirection);
 
@@ -48,6 +46,16 @@ export const useMap = (map) => {
       }
     }
 
+    if (
+      grid[loopRow][loopCol - 1] === 3 ||
+      grid[loopRow][loopCol + 1] === 3 ||
+      grid[loopRow - 1][loopCol] === 3 ||
+      grid[loopRow + 1][loopCol] === 3
+    ) {
+      window.location.reload(false);
+      console.log("you lost");
+    }
+
     if (trueRandomDirection === 1 || trueRandomDirection === 8) {
       if (
         grid[loopRow][loopCol - 1] === 2 ||
@@ -55,6 +63,8 @@ export const useMap = (map) => {
         grid[loopRow][loopCol - 1] === 9
       ) {
         return;
+      } else if (grid[loopRow][loopCol - 1] === 3) {
+        console.log("you lost");
       } else {
         const newGrid = grid;
         grid[loopRow][loopCol - 1] = characterNumber;
@@ -68,6 +78,8 @@ export const useMap = (map) => {
         grid[loopRow][loopCol + 1] === 9
       ) {
         return;
+      } else if (grid[loopRow][loopCol + 1] === 3) {
+        console.log("you lost");
       } else {
         const newGrid = grid;
         grid[loopRow][loopCol + 1] = characterNumber;
@@ -81,6 +93,8 @@ export const useMap = (map) => {
         grid[loopRow - 1][loopCol] === 9
       ) {
         return;
+      } else if (grid[loopRow - 1][loopCol] === 3) {
+        console.log("you lost");
       } else {
         const newGrid = grid;
         grid[loopRow - 1][loopCol] = characterNumber;
@@ -94,6 +108,8 @@ export const useMap = (map) => {
         grid[loopRow + 1][loopCol] === 9
       ) {
         return;
+      } else if (grid[loopRow + 1][loopCol] === 3) {
+        console.log("you lost");
       } else {
         const newGrid = grid;
         grid[loopRow + 1][loopCol] = characterNumber;
@@ -124,6 +140,9 @@ export const useMap = (map) => {
     }
     if (grid[loopRow][loopCol - 1] === 2 || grid[loopRow][loopCol - 1] === 9) {
       return;
+    } else if (grid[loopRow][loopCol - 1] === 10) {
+      window.location.reload(false);
+      console.log("you lost");
     } else {
       const newGrid = grid;
       newGrid[loopRow][loopCol - 1] = characterNumber;
@@ -155,6 +174,9 @@ export const useMap = (map) => {
     }
     if (grid[loopRow][loopCol + 1] === 2 || grid[loopRow][loopCol + 1] === 9) {
       return;
+    } else if (grid[loopRow][loopCol + 1] === 10) {
+      window.location.reload(false);
+      console.log("you lost");
     } else {
       const newGrid = grid;
       grid[loopRow][loopCol + 1] = characterNumber;
@@ -186,6 +208,9 @@ export const useMap = (map) => {
     }
     if (grid[loopRow + 1][loopCol] === 2 || grid[loopRow + 1][loopCol] === 9) {
       return;
+    } else if (grid[loopRow + 1][loopCol] === 10) {
+      window.location.reload(false);
+      console.log("you lost");
     } else if (grid[loopRow + 1][loopCol] === 4) {
       grid[loopRow + 1][loopCol] = 5;
       grid[loopRow][loopCol] = characterNumber;
@@ -226,6 +251,9 @@ export const useMap = (map) => {
     }
     if (grid[loopRow - 1][loopCol] === 2 || grid[loopRow - 1][loopCol] === 9) {
       return;
+    } else if (grid[loopRow - 1][loopCol] === 10) {
+      window.location.reload(false);
+      console.log("you lost");
     } else {
       const newGrid = grid;
       grid[loopRow - 1][loopCol] = characterNumber;

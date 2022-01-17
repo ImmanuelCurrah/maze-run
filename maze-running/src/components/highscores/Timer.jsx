@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import classes from "./Timer.module.css";
+import { useMoveAround } from "../hooks/useRandomMovement";
 
-export default function Timer({ startGame, recordTimerHandler, moveAround }) {
+export default function Timer({ startGame, recordTimerHandler, grid }) {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
+
+  const { moveAroundBat } = useMoveAround(grid);
 
   let myInterval;
 
@@ -24,7 +27,7 @@ export default function Timer({ startGame, recordTimerHandler, moveAround }) {
 
   useEffect(() => {
     recordTimerHandler(seconds, minutes);
-    moveAround(10);
+    moveAroundBat(10);
     //eslint-ignore-next-line
   }, [seconds]);
 

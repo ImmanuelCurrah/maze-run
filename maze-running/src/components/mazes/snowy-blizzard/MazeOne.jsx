@@ -41,6 +41,7 @@ export default function MazeOne() {
               startGame={startGame}
               recordTimerHandler={recordTimerHandler}
               moveAround={moveAroundBat}
+              grid={MapOne}
             />
           </div>
           <div className={classes.arrows}>

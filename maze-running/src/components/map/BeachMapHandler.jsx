@@ -6,6 +6,7 @@ import RedDudeBack from "../character-generator/red-dude/RedDudeBack";
 import RedDudeFront from "../character-generator/red-dude/RedDudeFront";
 import RedDudeRight from "../character-generator/red-dude/RedDudeRight";
 import RedDudeLeft from "../character-generator/red-dude/RedDudeLeft";
+import Bat from "../enemy-generator/Bat";
 
 export default function BeachMapHandler({ grid }) {
   return grid.map((row, rowID) => {
