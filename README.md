@@ -68,12 +68,12 @@ _These are examples only. Replace with your own MVP features._
 | Day           | Deliverable                                                         | Status     |
 | ------------- | ------------------------------------------------------------------- | ---------- |
 | January 8-10  | Prompt / Wireframes / Priority Matrix / Timeframes                  | Complete   |
-| January 10    | Project Approval                                                    | Incomplete |
-| January 10-11 | Core structure, and basic styling, maze generation                  | Incomplete |
-| January 11-12 | Code to give maze running function and actually transverse the maze | Incomplete |
-| January 13    | Score counting and high scores api communication                    | Incomplete |
-| January 14    | Finish up all my VPs                                                | Incomplete |
-| January 15-17 | Mvp                                                                 | Incomplete |
+| January 10    | Project Approval                                                    | Complete   |
+| January 10-11 | Core structure, and basic styling, maze generation                  | Complete   |
+| January 11-12 | Code to give maze running function and actually transverse the maze | Complete   |
+| January 13    | Score counting and high scores api communication                    | Complete   |
+| January 14    | Finish up all my MVPs                                               | Complete   |
+| January 15-17 | Post-Mvp                                                            | Complete   |
 | January 18    | Presentation                                                        | Incomplete |
 
 ## Timeframes
