@@ -50,7 +50,10 @@ export const useMap = (map) => {
     }
     if (grid[loopRow][loopCol - 1] === 2 || grid[loopRow][loopCol - 1] === 9) {
       return;
-    } else if (grid[loopRow][loopCol - 1] === 10) {
+    } else if (
+      grid[loopRow][loopCol - 1] === 10 ||
+      grid[loopRow][loopCol - 1] === 11
+    ) {
       window.location.reload(false);
       console.log("you lost");
     } else {
@@ -84,7 +87,10 @@ export const useMap = (map) => {
     }
     if (grid[loopRow][loopCol + 1] === 2 || grid[loopRow][loopCol + 1] === 9) {
       return;
-    } else if (grid[loopRow][loopCol + 1] === 10) {
+    } else if (
+      grid[loopRow][loopCol + 1] === 10 ||
+      grid[loopRow][loopCol + 1] === 11
+    ) {
       window.location.reload(false);
       console.log("you lost");
     } else {
@@ -118,7 +124,10 @@ export const useMap = (map) => {
     }
     if (grid[loopRow + 1][loopCol] === 2 || grid[loopRow + 1][loopCol] === 9) {
       return;
-    } else if (grid[loopRow + 1][loopCol] === 10) {
+    } else if (
+      grid[loopRow + 1][loopCol] === 10 ||
+      grid[loopRow + 1][loopCol] === 11
+    ) {
       window.location.reload(false);
       console.log("you lost");
     } else if (grid[loopRow + 1][loopCol] === 4) {
@@ -161,7 +170,10 @@ export const useMap = (map) => {
     }
     if (grid[loopRow - 1][loopCol] === 2 || grid[loopRow - 1][loopCol] === 9) {
       return;
-    } else if (grid[loopRow - 1][loopCol] === 10) {
+    } else if (
+      grid[loopRow - 1][loopCol] === 10 ||
+      grid[loopRow - 1][loopCol] === 11
+    ) {
       window.location.reload(false);
       console.log("you lost");
     } else {
