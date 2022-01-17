@@ -148,7 +148,6 @@ export const useMap = (map) => {
       grid[loopRow + 1][loopCol] === 11
     ) {
       window.location.reload(false);
-      console.log("you lost");
       //checks for gems
     } else if (grid[loopRow + 1][loopCol] === 12) {
       const newGrid = grid;
