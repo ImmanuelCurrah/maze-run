@@ -22,26 +22,34 @@ This project will be a maze game build using react. The main functionality of th
 {
   "records": [
     {
-      "id": "recYs3JCSjR9oczog",
+      "id": "reca0qUGVz3v01A9m",
       "fields": {
-        "score": "3000",
-        "name": "Immanuel",
-        "time": "12:34"
+        "score": 350,
+        "maze": "Snowy Blizzard",
+        "time": "0:51"
       },
-      "createdTime": "2022-01-08T18:19:49.000Z"
+      "createdTime": "2022-01-17T20:59:25.000Z"
     },
     {
-      "id": "recemc0dDNqXAwMju",
-      "fields": {},
-      "createdTime": "2022-01-08T18:19:49.000Z"
+      "id": "recNfNfivw8v9IaSl",
+      "fields": {
+        "score": -488,
+        "maze": "Beach",
+        "time": "0:13"
+      },
+      "createdTime": "2022-01-17T21:00:11.000Z"
     },
     {
-      "id": "rec191vPTyhQRpInp",
-      "fields": {},
-      "createdTime": "2022-01-08T18:19:49.000Z"
+      "id": "recVlob6ha8EzVYxR",
+      "fields": {
+        "maze": "Dungeon",
+        "score": -92,
+        "time": "0:19"
+      },
+      "createdTime": "2022-01-17T23:09:32.000Z"
     }
   ],
-  "offset": "itrIMBM3THmSA0t7O/rec191vPTyhQRpInp"
+  "offset": "itroAGHhr4tHJ0ZN7/recVlob6ha8EzVYxR"
 }
 ```
 
