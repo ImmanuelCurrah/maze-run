@@ -33,7 +33,9 @@ export const useMoveAround = (map) => {
       if (
         grid[loopRow][loopCol - 1] === 2 ||
         grid[loopRow][loopCol - 1] === 4 ||
-        grid[loopRow][loopCol - 1] === 9
+        grid[loopRow][loopCol - 1] === 9 ||
+        grid[loopRow][loopCol - 1] === 10 ||
+        grid[loopRow][loopCol - 1] === 11
       ) {
         return;
       } else {
@@ -46,7 +48,9 @@ export const useMoveAround = (map) => {
       if (
         grid[loopRow][loopCol + 1] === 2 ||
         grid[loopRow][loopCol + 1] === 4 ||
-        grid[loopRow][loopCol + 1] === 9
+        grid[loopRow][loopCol + 1] === 9 ||
+        grid[loopRow][loopCol + 1] === 10 ||
+        grid[loopRow][loopCol + 1] === 11
       ) {
         return;
       } else {
@@ -59,7 +63,9 @@ export const useMoveAround = (map) => {
       if (
         grid[loopRow - 1][loopCol] === 2 ||
         grid[loopRow - 1][loopCol] === 4 ||
-        grid[loopRow - 1][loopCol] === 9
+        grid[loopRow - 1][loopCol] === 9 ||
+        grid[loopRow - 1][loopCol] === 10 ||
+        grid[loopRow - 1][loopCol] === 11
       ) {
         return;
       } else {
@@ -72,7 +78,9 @@ export const useMoveAround = (map) => {
       if (
         grid[loopRow + 1][loopCol] === 2 ||
         grid[loopRow + 1][loopCol] === 4 ||
-        grid[loopRow + 1][loopCol] === 9
+        grid[loopRow + 1][loopCol] === 9 ||
+        grid[loopRow + 1][loopCol] === 10 ||
+        grid[loopRow + 1][loopCol] === 11
       ) {
         return;
       } else {

@@ -7,6 +7,7 @@ import BlueWitchFront from "../character-generator/blue-witch/BlueWitchFront";
 import BlueWitchRight from "../character-generator/blue-witch/BlueWitchRight";
 import BlueWitchLeft from "../character-generator/blue-witch/BlueWitchLeft";
 import BatOne from "../enemy-generator/BatOne";
+import GemGrassy from "../gem-generator/GemGrassy";
 
 export default function MapHandler({ grid }) {
   return grid.map((row, rowID) => {
@@ -31,6 +32,8 @@ export default function MapHandler({ grid }) {
             return <BatOne key={nodeId} />;
           } else if (node === 11) {
             return <BatOne key={nodeId} />;
+          } else if (node === 12) {
+            return <GemGrassy key={nodeId} />;
           } else {
             return <FloorTile key={nodeId}></FloorTile>;
           }

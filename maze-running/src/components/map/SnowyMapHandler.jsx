@@ -7,6 +7,7 @@ import SnowPrincessFront from "../character-generator/snow-princess/SnowPrincess
 import SnowPrincessRight from "../character-generator/snow-princess/SnowPrincessRight";
 import SnowPrincessLeft from "../character-generator/snow-princess/SnowPrincessLeft";
 import Bat from "../enemy-generator/Bat";
+import GemSnowy from "../gem-generator/GemSnowy";
 
 export default function BeachMapHandler({ grid }) {
   return grid.map((row, rowID) => {
@@ -31,6 +32,8 @@ export default function BeachMapHandler({ grid }) {
             return <Bat key={nodeId} />;
           } else if (node === 11) {
             return <Bat key={nodeId} />;
+          } else if (node === 12) {
+            return <GemSnowy key={nodeId} />;
           } else {
             return <SnowyFloorTile key={nodeId} />;
           }

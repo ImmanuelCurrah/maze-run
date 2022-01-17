@@ -13,7 +13,6 @@ export const useMap = (map) => {
   const [score, setScore] = useState(0);
 
   let trueScore = score + lastSecond + lastMinute * 60;
-  // console.log(toggleMap);
 
   const { timeHandler } = useGetHighScoresUpdate(stopGame);
   const navigate = useNavigate();
@@ -29,6 +28,7 @@ export const useMap = (map) => {
     }
   };
 
+  //below is how each step of the function works and what its checking for. they all follow the same pattern. Except for move right, see below
   // MOVE UP
   const moveUp = () => {
     let length = grid.length;
@@ -48,20 +48,31 @@ export const useMap = (map) => {
         }
       }
     }
+    // checks for walls
     if (grid[loopRow][loopCol - 1] === 2 || grid[loopRow][loopCol - 1] === 9) {
       return;
     } else if (
+      //checks if moved into a bat
       grid[loopRow][loopCol - 1] === 10 ||
       grid[loopRow][loopCol - 1] === 11
     ) {
       window.location.reload(false);
       console.log("you lost");
+      //checks for a gem
+    } else if (grid[loopRow][loopCol - 1] === 12) {
+      const newGrid = grid;
+      grid[loopRow][loopCol - 1] = 3;
+      grid[loopRow][loopCol] = 1;
+      setGrid(newGrid);
+      setScore((prevScore) => prevScore - 100);
+      //regular movement
     } else {
       const newGrid = grid;
       newGrid[loopRow][loopCol - 1] = 3;
       newGrid[loopRow][loopCol] = 1;
       setGrid(newGrid);
     }
+    //toggles the map and then adds points based on steps
     setToggleMap((prevToggle) => !prevToggle);
     setScore((prevScore) => prevScore + 10);
   };
@@ -93,6 +104,12 @@ export const useMap = (map) => {
     ) {
       window.location.reload(false);
       console.log("you lost");
+    } else if (grid[loopRow][loopCol + 1] === 12) {
+      const newGrid = grid;
+      grid[loopRow][loopCol + 1] = 6;
+      grid[loopRow][loopCol] = 1;
+      setGrid(newGrid);
+      setScore((prevScore) => prevScore - 200);
     } else {
       const newGrid = grid;
       grid[loopRow][loopCol + 1] = 6;
@@ -122,14 +139,24 @@ export const useMap = (map) => {
         }
       }
     }
+    //checks for walls
     if (grid[loopRow + 1][loopCol] === 2 || grid[loopRow + 1][loopCol] === 9) {
       return;
     } else if (
+      //checks for bats
       grid[loopRow + 1][loopCol] === 10 ||
       grid[loopRow + 1][loopCol] === 11
     ) {
       window.location.reload(false);
       console.log("you lost");
+      //checks for gems
+    } else if (grid[loopRow + 1][loopCol] === 12) {
+      const newGrid = grid;
+      grid[loopRow + 1][loopCol] = 7;
+      grid[loopRow][loopCol] = 1;
+      setGrid(newGrid);
+      setScore((prevScore) => prevScore - 200);
+      //checks for the chest and end of game
     } else if (grid[loopRow + 1][loopCol] === 4) {
       grid[loopRow + 1][loopCol] = 5;
       grid[loopRow][loopCol] = 7;
@@ -139,11 +166,13 @@ export const useMap = (map) => {
         window.location.reload(false);
       }, 500);
     } else {
+      //regular movement
       const newGrid = grid;
       grid[loopRow + 1][loopCol] = 7;
       grid[loopRow][loopCol] = 1;
       setGrid(newGrid);
     }
+    //toggles map, points, and start of game
     setToggleMap((prevToggle) => !prevToggle);
     setScore((prevScore) => prevScore + 10);
     setStartGame(true);
@@ -176,6 +205,12 @@ export const useMap = (map) => {
     ) {
       window.location.reload(false);
       console.log("you lost");
+    } else if (grid[loopRow - 1][loopCol] === 12) {
+      const newGrid = grid;
+      grid[loopRow - 1][loopCol] = 8;
+      grid[loopRow][loopCol] = 1;
+      setGrid(newGrid);
+      setScore((prevScore) => prevScore - 200);
     } else {
       const newGrid = grid;
       grid[loopRow - 1][loopCol] = 8;

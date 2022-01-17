@@ -7,6 +7,7 @@ import RedDudeFront from "../character-generator/red-dude/RedDudeFront";
 import RedDudeRight from "../character-generator/red-dude/RedDudeRight";
 import RedDudeLeft from "../character-generator/red-dude/RedDudeLeft";
 import BatTwo from "../enemy-generator/BatTwo";
+import GemBeach from "../gem-generator/GemBeach";
 
 export default function BeachMapHandler({ grid }) {
   return grid.map((row, rowID) => {
@@ -31,6 +32,8 @@ export default function BeachMapHandler({ grid }) {
             return <BatTwo key={nodeId} />;
           } else if (node === 11) {
             return <BatTwo key={nodeId} />;
+          } else if (node === 12) {
+            return <GemBeach key={nodeId} />;
           } else {
             return <DeckTwoTile key={nodeId} />;
           }
