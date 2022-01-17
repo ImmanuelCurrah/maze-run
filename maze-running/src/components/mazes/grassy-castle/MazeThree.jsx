@@ -24,8 +24,22 @@ export default function MazeThree() {
     trueScore,
   } = useMap(MapThree);
 
+  const moveCharacter = (e) => {
+    if (e.key === "ArrowRight") {
+      moveRight();
+    } else if (e.key === "ArrowLeft") {
+      moveLeft();
+    } else if (e.key === "ArrowUp") {
+      moveUp();
+    } else if (e.key === "ArrowDown") {
+      moveDown();
+    }
+  };
+
   useEffect(() => {
-    document.addEventListener("keydown", moveRight);
+    document.addEventListener("keydown", (e) => {
+      moveCharacter(e);
+    });
   }, []);
 
   useEffect(() => {
