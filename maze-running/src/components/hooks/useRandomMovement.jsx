@@ -36,6 +36,7 @@ export const useMoveAround = (map) => {
         grid[loopRow][loopCol - 1] === 9 ||
         grid[loopRow][loopCol - 1] === 10 ||
         grid[loopRow][loopCol - 1] === 11 ||
+        grid[loopRow][loopCol - 1] === 13 ||
         grid[loopRow][loopCol - 1] === undefined
       ) {
         return;
@@ -52,6 +53,7 @@ export const useMoveAround = (map) => {
         grid[loopRow][loopCol + 1] === 9 ||
         grid[loopRow][loopCol + 1] === 10 ||
         grid[loopRow][loopCol + 1] === 11 ||
+        grid[loopRow][loopCol + 1] === 13 ||
         grid[loopRow][loopCol + 1] === undefined
       ) {
         return;
@@ -68,6 +70,7 @@ export const useMoveAround = (map) => {
         grid[loopRow - 1][loopCol] === 9 ||
         grid[loopRow - 1][loopCol] === 10 ||
         grid[loopRow - 1][loopCol] === 11 ||
+        grid[loopRow - 1][loopCol] === 13 ||
         grid[loopRow - 1][loopCol] === undefined
       ) {
         return;
@@ -84,6 +87,7 @@ export const useMoveAround = (map) => {
         grid[loopRow + 1][loopCol] === 9 ||
         grid[loopRow + 1][loopCol] === 10 ||
         grid[loopRow + 1][loopCol] === 11 ||
+        grid[loopRow + 1][loopCol] === 13 ||
         grid[loopRow + 1][loopCol] === undefined
       ) {
         return;

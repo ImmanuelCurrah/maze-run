@@ -54,7 +54,8 @@ export const useMap = (map) => {
     } else if (
       //checks if moved into a bat
       grid[loopRow][loopCol - 1] === 10 ||
-      grid[loopRow][loopCol - 1] === 11
+      grid[loopRow][loopCol - 1] === 11 ||
+      grid[loopRow][loopCol - 1] === 13
     ) {
       window.location.reload(false);
       console.log("you lost");
@@ -100,7 +101,8 @@ export const useMap = (map) => {
       return;
     } else if (
       grid[loopRow][loopCol + 1] === 10 ||
-      grid[loopRow][loopCol + 1] === 11
+      grid[loopRow][loopCol + 1] === 11 ||
+      grid[loopRow][loopCol + 1] === 13
     ) {
       window.location.reload(false);
       console.log("you lost");
@@ -145,7 +147,8 @@ export const useMap = (map) => {
     } else if (
       //checks for bats
       grid[loopRow + 1][loopCol] === 10 ||
-      grid[loopRow + 1][loopCol] === 11
+      grid[loopRow + 1][loopCol] === 11 ||
+      grid[loopRow + 1][loopCol] === 13
     ) {
       window.location.reload(false);
       //checks for gems
@@ -200,7 +203,8 @@ export const useMap = (map) => {
       return;
     } else if (
       grid[loopRow - 1][loopCol] === 10 ||
-      grid[loopRow - 1][loopCol] === 11
+      grid[loopRow - 1][loopCol] === 11 ||
+      grid[loopRow - 1][loopCol] === 13
     ) {
       window.location.reload(false);
       console.log("you lost");

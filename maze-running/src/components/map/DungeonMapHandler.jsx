@@ -37,6 +37,8 @@ export default function DungeonMapHandler({ grid }) {
             return <BatThree key={nodeId} />;
           } else if (node === 12) {
             return <GemDungeon key={nodeId} />;
+          } else if (node === 13) {
+            return <BatThree key={nodeId} />;
           } else {
             return <FloorTileD key={nodeId}></FloorTileD>;
           }

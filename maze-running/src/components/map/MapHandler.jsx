@@ -34,6 +34,8 @@ export default function MapHandler({ grid }) {
             return <BatOne key={nodeId} />;
           } else if (node === 12) {
             return <GemGrassy key={nodeId} />;
+          } else if (node === 13) {
+            return <BatOne key={nodeId} />;
           } else {
             return <FloorTile key={nodeId}></FloorTile>;
           }

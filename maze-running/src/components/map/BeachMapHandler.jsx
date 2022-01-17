@@ -34,6 +34,8 @@ export default function BeachMapHandler({ grid }) {
             return <BatTwo key={nodeId} />;
           } else if (node === 12) {
             return <GemBeach key={nodeId} />;
+          } else if (node === 13) {
+            return <BatTwo key={nodeId} />;
           } else {
             return <DeckTwoTile key={nodeId} />;
           }

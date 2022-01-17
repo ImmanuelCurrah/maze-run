@@ -34,6 +34,8 @@ export default function BeachMapHandler({ grid }) {
             return <Bat key={nodeId} />;
           } else if (node === 12) {
             return <GemSnowy key={nodeId} />;
+          } else if (node === 13) {
+            return <Bat key={nodeId} />;
           } else {
             return <SnowyFloorTile key={nodeId} />;
           }
