@@ -1,6 +1,6 @@
 # Maze Running
 
-[https://peaceful-wiles-aa2f8d.netlify.app/]()
+[https://peaceful-wiles-aa2f8d.netlify.app/](https://peaceful-wiles-aa2f8d.netlify.app/)
 
 ## Project Description
 
